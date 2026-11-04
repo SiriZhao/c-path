@@ -1,0 +1,36 @@
+"""Generate the reviewed C·Path-original exercises without copying third-party statements."""
+from __future__ import annotations
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+BASE = {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+}
+
+def q(id: str, title: str, chapter: str, topics: list[str], difficulty: str, statement: str, input_format: str, output_format: str, examples: list[dict[str, str]], tests: list[tuple[str, str]], starter: str, solution: str, hints: list[str]) -> dict:
+    return {**BASE, "id": id, "title": title, "chapter": chapter, "topics": topics, "difficulty": difficulty, "statement": statement, "inputFormat": input_format, "outputFormat": output_format, "examples": examples, "hints": hints, "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。", "starterCode": starter, "referenceSolution": solution, "testCases": [{"id": f"case-{i+1}", "input": inp, "expectedOutput": out} for i, (inp, out) in enumerate(tests)], "provenance": {"path": "src/data/originals.json", "sha256": "generated-from-reviewed-original", "readmeScore": "", "contentStatus": "C·Path authored content"}}
+
+starter = "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n"
+items = [
+q("orig-hello-world", "Hello, C·Path!", "计算机、程序与 C 语言", ["标准输出", "main 函数", "printf"], "入门", "输出一行 Hello, C·Path!，末尾换行。", "无输入。", "输出一行固定文本。", [{"input": "", "output": "Hello, C·Path!"}], [("", "Hello, C·Path!\n")]*5, starter, '#include <stdio.h>\nint main(void) { printf("Hello, C·Path!\\n"); return 0; }\n', ["先找到程序的入口函数。", "使用 printf 输出固定字符串并显式换行。", "关键实现是 printf(\"Hello, C·Path!\\n\");"]),
+q("orig-sum-two-integers", "两个整数求和", "变量、运算符和表达式", ["变量", "scanf", "整数运算"], "入门", "读取两个整数，输出它们的和。", "一行包含两个整数 a 和 b。", "输出 a+b，单独占一行。", [{"input": "3 5", "output": "8"}, {"input": "-2 7", "output": "5"}], [("3 5\n", "8\n"), ("-2 7\n", "5\n"), ("0 0\n", "0\n"), ("100 -30\n", "70\n"), ("-8 -9\n", "-17\n")], starter, '#include <stdio.h>\nint main(void) { int a,b; if (scanf("%d %d", &a, &b) != 2) return 1; printf("%d\\n", a+b); return 0; }\n', ["先声明两个 int 变量。", "scanf 的参数需要传变量地址。", "读取成功后输出 a + b。"]),
+q("orig-even-or-odd", "判断奇偶数", "条件判断与分支结构", ["if", "取模", "条件判断"], "入门", "读取一个整数，判断它是奇数还是偶数。", "一行包含整数 n。", "偶数输出 even，奇数输出 odd。", [{"input": "8", "output": "even"}, {"input": "-3", "output": "odd"}], [("8\n", "even\n"), ("-3\n", "odd\n"), ("0\n", "even\n"), ("1\n", "odd\n"), ("100\n", "even\n")], starter, '#include <stdio.h>\nint main(void) { int n; if (scanf("%d", &n) != 1) return 1; puts(n % 2 == 0 ? "even" : "odd"); return 0; }\n', ["奇偶性可以通过除法余数判断。", "负数取模仍可判断是否为 0。", "n % 2 == 0 时输出 even。"]),
+q("orig-max-of-three", "三个数的最大值", "条件判断与分支结构", ["if", "比较", "变量更新"], "入门", "读取三个整数，输出其中最大的一个。", "一行包含三个整数。", "输出最大值，单独占一行。", [{"input": "3 9 5", "output": "9"}, {"input": "-1 -8 -3", "output": "-1"}], [("3 9 5\n", "9\n"), ("-1 -8 -3\n", "-1\n"), ("4 4 2\n", "4\n"), ("0 0 0\n", "0\n"), ("100 -2 7\n", "100\n")], starter, '#include <stdio.h>\nint main(void) { int a,b,c,max; if (scanf("%d %d %d", &a,&b,&c) != 3) return 1; max=a; if (b>max) max=b; if (c>max) max=c; printf("%d\\n", max); return 0; }\n', ["先把第一个数作为当前最大值。", "依次比较第二、第三个数。", "相等时保留当前值即可。"]),
+q("orig-switch-menu", "简单的 switch 分支", "条件判断与分支结构", ["switch", "case", "字符"], "基础", "读取一个字符命令：a 输出 add，s 输出 subtract，其他命令输出 unknown。", "输入一个字符。", "输出对应单词。", [{"input": "a", "output": "add"}, {"input": "x", "output": "unknown"}], [("a\n", "add\n"), ("s\n", "subtract\n"), ("x\n", "unknown\n"), ("A\n", "unknown\n"), ("\n", "unknown\n")], starter, '#include <stdio.h>\nint main(void) { char command; if (scanf("%c", &command) != 1) return 1; switch (command) { case \'a\': puts("add"); break; case \'s\': puts("subtract"); break; default: puts("unknown"); } return 0; }\n', ["switch 适合处理离散的命令值。", "每个 case 结束后注意 break。", "default 负责未覆盖的输入。"]),
+q("orig-digit-count", "整数位数统计", "循环结构", ["while", "整数除法", "边界"], "基础", "读取一个整数，输出它的十进制位数。0 的位数定义为 1。", "一行包含整数 n。", "输出位数。", [{"input": "0", "output": "1"}, {"input": "-1200", "output": "4"}], [("0\n", "1\n"), ("-1200\n", "4\n"), ("7\n", "1\n"), ("100000\n", "6\n"), ("-9\n", "1\n")], starter, '#include <stdio.h>\nint main(void) { int n; if (scanf("%d", &n) != 1) return 1; int count=0; if (n<0) n=-n; do { count++; n/=10; } while (n!=0); printf("%d\\n", count); return 0; }\n', ["负号不属于十进制位数。", "0 需要特殊处理，do-while 很适合。", "每次整数除以 10，位数加一。"]),
+q("orig-factorial", "计算阶乘", "循环结构", ["for", "累乘", "函数边界"], "基础", "读取 n，输出 n!。本题约束 0≤n≤12。", "一行包含 n。", "输出 n!。", [{"input": "0", "output": "1"}, {"input": "5", "output": "120"}], [("0\n", "1\n"), ("1\n", "1\n"), ("5\n", "120\n"), ("10\n", "3628800\n"), ("12\n", "479001600\n")], starter, '#include <stdio.h>\nint main(void) { int n; if (scanf("%d", &n) != 1 || n<0 || n>12) return 1; long long result=1; for (int i=2;i<=n;i++) result*=i; printf("%lld\\n", result); return 0; }\n', ["阶乘是从 1 到 n 的连续乘积。", "0! 的结果按定义是 1。", "使用 long long 覆盖题目范围。"]),
+q("orig-average", "一组数的平均值", "数组", ["数组", "循环", "浮点输出"], "基础", "读取 n 个整数，输出它们的平均值，保留两位小数。约束 1≤n≤100。", "第一行 n，第二行 n 个整数。", "输出平均值，保留两位小数。", [{"input": "3\n1 2 4", "output": "2.33"}, {"input": "2\n-1 1", "output": "0.00"}], [("3\n1 2 4\n", "2.33\n"), ("1\n5\n", "5.00\n"), ("2\n-1 1\n", "0.00\n"), ("4\n0 0 1 2\n", "0.75\n"), ("5\n10 20 30 40 50\n", "30.00\n")], starter, '#include <stdio.h>\nint main(void) { int n; if (scanf("%d", &n) != 1 || n<1 || n>100) return 1; long long sum=0; for (int i=0,x;i<n;i++) { if (scanf("%d", &x)!=1) return 1; sum+=x; } printf("%.2f\\n", (double)sum/n); return 0; }\n', ["先累加整数，最后再转换为 double。", "平均值可能不是整数。", "printf 的 %.2f 会保留两位小数。"]),
+q("orig-array-max-position", "数组最大值与位置", "数组", ["数组", "遍历", "下标"], "基础", "读取 n 个整数，输出最大值及其第一次出现的位置。位置从 1 开始。", "第一行 n，第二行 n 个整数，1≤n≤100。", "输出：最大值和第一次出现的位置。", [{"input": "4\n2 9 3 9", "output": "9 2"}, {"input": "1\n-5", "output": "-5 1"}], [("4\n2 9 3 9\n", "9 2\n"), ("1\n-5\n", "-5 1\n"), ("3\n0 0 -1\n", "0 1\n"), ("5\n-2 -1 -3 -1 -4\n", "-1 2\n"), ("2\n100 99\n", "100 1\n")], starter, '#include <stdio.h>\nint main(void) { int n; if (scanf("%d", &n)!=1 || n<1 || n>100) return 1; int x,max=0,pos=1; for (int i=1;i<=n;i++) { if (scanf("%d", &x)!=1) return 1; if (i==1 || x>max) { max=x; pos=i; } } printf("%d %d\\n", max,pos); return 0; }\n', ["位置和数组下标相差 1。", "第一次出现要求只在严格更大时更新。", "第一个数可以作为初始最大值。"]),
+q("orig-string-length", "字符串长度统计", "字符串", ["字符数组", "while", "字符串结束"], "基础", "读取一行不超过 100 个字符的文本，输出不含换行符的长度。", "输入一行文本，可能包含空格。", "输出字符数量。", [{"input": "hello", "output": "5"}, {"input": "C Path", "output": "6"}], [("hello\n", "5\n"), ("\n", "0\n"), ("C Path\n", "6\n"), ("12345\n", "5\n"), ("a b c\n", "5\n")], starter, '#include <stdio.h>\nint main(void) { char text[101]; if (!fgets(text,sizeof(text),stdin)) return 1; int length=0; while (text[length] && text[length]!=\'\\n\') length++; printf("%d\\n", length); return 0; }\n', ["fgets 可以读取空格。", "换行符不是题目要求统计的内容。", "遇到 \\0 或 \\n 时停止计数。"]),
+]
+
+(ROOT / "src/data/originals.json").write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
+print(f"wrote {len(items)} original exercises")

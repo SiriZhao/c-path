@@ -21,3 +21,12 @@ test('practice draft survives reload', async ({ page }, testInfo) => {
   await expect(page.getByRole('textbox', { name: 'C 代码编辑器' })).toHaveValue('int main(void) { return 7; }')
   await page.screenshot({ path: testInfo.outputPath('practice-reload.png'), fullPage: true })
 })
+
+test('original exercise exposes real statement and local test inventory', async ({ page }) => {
+  await page.goto('./#/bank')
+  await page.getByPlaceholder('搜索题号、标题或知识点').fill('两个整数求和')
+  await page.getByRole('button', { name: /打开 两个整数求和/ }).click()
+  await expect(page.getByText('C·Path 原创')).toBeVisible()
+  await expect(page.getByText('本题配置 5 组本地测试')).toBeVisible()
+  await expect(page.getByText('当前静态站点未配置 C 编译器')).toHaveCount(0)
+})

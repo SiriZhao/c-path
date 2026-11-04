@@ -6,13 +6,15 @@
 
 ## 当前版本
 
-已经可用：课程地图、题库搜索与过滤、练习工作区、代码自动保存、学习记录、主题切换、错题/完成状态基础记录、导出导入接口，以及真实题库审计报告。
+已经可用：课程地图、题库搜索与过滤、练习工作区、代码自动保存、版本化学习记录、最近练习、原创基础题、题目状态筛选、主题切换、导出导入接口，以及真实题库审计报告。
 
 在线地址：<https://sirizhao.github.io/c-path/>。部署由 GitHub Actions 完成，浏览器验收由独立的 Chromium 工作流执行。
 
 明确边界：GitHub Pages 没有可信的编译器进程。当前练习页不会用关键词或预设输出伪造 Accepted；点击“运行”会如实显示 `UNAVAILABLE`。要启用真实执行，需要后续接入经审查的 WebAssembly C 编译器或自托管评测服务，并补齐每题的公开测试。
 
 运行器评估记录见 [`docs/runtime-evaluation.md`](docs/runtime-evaluation.md)。当前题库数据会在应用启动时进行 Schema 校验，导入的学习记录会按版本和字段类型清洗。
+
+原创题验证边界见 [`docs/originals-validation.md`](docs/originals-validation.md)。C_PAT 导入题仍然保持题面待补录状态，不会因为存在源代码就被标记为可评测。
 
 ## 本地开发
 

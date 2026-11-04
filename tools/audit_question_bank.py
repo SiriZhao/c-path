@@ -82,6 +82,10 @@ def make_question(path: Path, metadata: dict[str, str], bank: Path) -> dict:
             "contentStatus": "only source code and README title are available",
         },
         "reviewStatus": "source-imported-needs-statement-and-tests",
+        "sourceKind": "pat-import",
+        "contentStatus": "imported",
+        "testVersion": None,
+        "author": None,
     }
 
 
