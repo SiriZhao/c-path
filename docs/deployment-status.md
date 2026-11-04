@@ -7,11 +7,12 @@
 - 已在项目目录创建独立 `.git`，目标远程明确为 `https://github.com/SiriZhao/c-path.git`。
 - 本地提交：`16ad101efb907759e25ed4fadab429c50b481a60`。
 - 目标仓库检查返回 404，推送返回 `Repository not found`；本地 `gh auth status` 同时显示 SiriZhao 登录令牌失效。
-- 认证恢复后已创建仓库并正常推送 `main`，最新远程 SHA 为 `86e98fbd19202956aaedd265eff27fb0e88a5404`。
+- 认证恢复后已创建仓库并正常推送 `main`，最新远程 SHA 为 `947f51762147fc0c816196034e50c330dbbee27b`。
 - GitHub Pages 已通过 API 配置为 `build_type=workflow`。
 - 第二次 Actions 运行 `41838809277` 的 build 和 deploy 均成功。
 - Pages deployment `7547327461` 状态为 `success`，环境 URL 为 `https://sirizhao.github.io/c-path/`。
 - 最新提交 `86e98fb` 的 Pages 工作流 `41845936251` 和 Browser QA 工作流 `41845936087` 均成功。
+- 最新提交 `947f517` 的 Pages 工作流 `41847440498` 和 Browser QA 工作流 `41847440370` 均成功。
 - 本机 PowerShell/curl 的 HTTPS 请求受 Windows Schannel 凭据错误影响，未将本机请求冒充线上浏览器验证；GitHub deployment 状态已由 API 复核。
 
 ## 继续发布
