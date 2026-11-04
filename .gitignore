@@ -5,3 +5,5 @@ dist
 .npm-cache
 *.tsbuildinfo
 .check-*.log
+test-results
+playwright-report

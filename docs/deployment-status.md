@@ -4,8 +4,10 @@
 
 - `vite.config.ts` 已设置项目路径 `/c-path/`。
 - `.github/workflows/pages.yml` 已提供类型检查、测试、构建和 Pages 部署工作流。
-- 当前工作目录没有独立 `.git` 仓库；可读到的上级 Git 配置远程是 `https://github.com/SiriZhao/Python.git`，与目标 `SiriZhao/c-path` 不一致。
-- 因此本次没有创建提交、没有推送，也没有声称线上地址可访问。
+- 已在项目目录创建独立 `.git`，目标远程明确为 `https://github.com/SiriZhao/c-path.git`。
+- 本地提交：`16ad101efb907759e25ed4fadab429c50b481a60`。
+- 目标仓库检查返回 404，推送返回 `Repository not found`；本地 `gh auth status` 同时显示 SiriZhao 登录令牌失效。
+- 因此没有声称线上地址可访问。
 
 ## 继续发布
 
