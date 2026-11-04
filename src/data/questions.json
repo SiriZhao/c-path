@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "pat-10_0",
+    "title": "说反话",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "字符数组",
+      "指针"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint l=0;\r\n\tchar a[81];\r\n\tchar *p;\r\n\twhile ( (a[l]=getchar())!='\\n' ) l++;\r\n\ta[l]='\\0';\r\n\tfor ( ; l>0; l-- )\r\n\t{\t\t\r\n\t\tif ( a[l]==' ' )\r\n\t\t{\t\r\n\t\t\tp=a+l;  //point to l\r\n\t\t\tprintf(\"%s \", p+1);\r\n\t\t\t*p='\\0';   //change the array\r\n\t\t}\t\r\n\t} \r\n\tprintf(\"%s\\n\", a);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "10_0.c",
+      "sha256": "c56f296402140fb78fd2dd10f389ea60f9825cb1bcca42feb2ada7835e33f5cb",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-10_1",
+    "title": "在字符串中查找指定字符",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "字符数组",
+      "指针"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n#include <string.h>\r\n\r\nint main()\r\n{\r\n\tint l=0;\r\n\tchar a[81];\r\n\tchar *p, c;\r\n\twhile ( (a[l]=getchar())!='\\n' ) l++;\r\n\ta[l]='\\0';\r\n\tscanf(\"%c\", &c);\r\n\tp=strchr(a, c);\r\n\tif ( p ) printf(\"%s\\n\", p);\r\n\telse printf(\"Not found\\n\");\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "10_1.c",
+      "sha256": "958edc8f2ea0ad6646e71e8bfd6c9bba7ef4f95928c5fa78f82e7e5b92cd86d4",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-10_2",
+    "title": "删除字符串中的子串",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "字符数组",
+      "指针"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n#include <string.h>\r\n\r\nint main()\r\n{\r\n\tint l1=0, l2=0;\r\n\tchar s1[81], s2[81], t[81]={0};\r\n\tchar *p;\r\n\twhile ( (s1[l1]=getchar())!='\\n' ) l1++;\r\n\twhile ( (s2[l2]=getchar())!='\\n' ) l2++;\r\n\ts1[l1]='\\0'; \r\n\ts2[l2]='\\0';\r\n\twhile ( (p=strstr(s1, s2))!=NULL )\r\n\t{\r\n\t\t*p='\\0';\r\n\t\tstrcat(t, s1);   //append str before s2\r\n\t\tstrcat(t, p+l2);    //append str after s2\r\n\t\tstrcpy(s1, t);    //copy\r\n\t\tt[0]='\\0';\r\n\t}\r\n\tprintf(\"%s\\n\", s1);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "10_2.c",
+      "sha256": "7816f01236a0820bf65d55264e3faa4d892042508cbaaa67159b70c3d6e78327",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-10_3",
+    "title": "字符串逆序",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "字符数组",
+      "指针"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint l=0;\r\n\tchar a[81];\r\n\tchar *p;\r\n\twhile ( (a[l]=getchar())!='\\n' ) l++;\r\n\ta[l]='\\0';\r\n\tfor ( l--; l>=0; l-- ) printf(\"%c\", a[l]);\r\n\tprintf(\"\\n\");\r\n\treturn 0;\r\n}\t\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "10_3.c",
+      "sha256": "c10fb19eb6a7028c5026dfb76a5c89772d7a81078d5a66529af5cb2af885607b",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-10_4",
+    "title": "字符串循环左移",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "字符数组",
+      "指针"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n, l=0;\r\n\tchar a[101];\r\n\tchar *p;\r\n\twhile ( (a[l]=getchar())!='\\n' ) l++;\r\n\ta[l]='\\0';\r\n\tscanf(\"%d\", &n);\r\n\twhile ( n>l ) n-=l;\r\n\tprintf(\"%s\", a+n); \r\n\tfor ( int i=0; i<n; i++ ) printf(\"%c\", a[i]);\r\n\tprintf(\"\\n\");\r\n\treturn 0;\r\n}\t\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "10_4.c",
+      "sha256": "5d71d237b5d3d28e9bdd53b4a58aa266d4c20b0c93515e44445426cb0cc5c6d8",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-11_0",
+    "title": "平面向量加法",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "结构体与自定义类型",
+    "topics": [
+      "结构体",
+      "自定义类型",
+      "数据组织"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tdouble a=0.0, b=0.0, c=0.0, d=0.0;\r\n\tscanf(\"%lf %lf %lf %lf\", &a, &b, &c, &d);\r\n\tdouble x=a+c, y=b+d;\r\n\tif ( x>=-0.05 && x<0 ) x+=0.05;\r\n\tif ( y>=-0.05 && y<0 ) y+=0.05;\r\n\tprintf(\"(%.1f, %.1f)\\n\", x, y);\r\n\treturn 0;\r\n}\t\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "11_0.c",
+      "sha256": "7df8ee7daa94488ea048d2846b113aa22f328da993ea0c45dae1b61bead44684",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-11_1",
+    "title": "通讯录的录入与显示",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "结构体与自定义类型",
+    "topics": [
+      "结构体",
+      "自定义类型",
+      "数据组织"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nstruct P\r\n{\r\n\tchar name[11];\r\n\tchar home[17];\r\n\tchar cell[17];\r\n\tchar sex;\r\n\tchar birth[11];\r\n};\r\n\r\nint main()\r\n{\r\n\tstruct P p[10];\r\n\tint m[10];\r\n\tint n=0, n2=0;\r\n\tscanf(\"%d\", &n);\r\n\tfor ( int i=0; i<n; ++i )\r\n\t{\r\n\t\tscanf(\"%s %s %c %s %s\", p[i].name, p[i].birth, &p[i].sex, p[i].home, p[i].cell);\r\n\t}\r\n\tscanf(\"%d\", &n2);\r\n\tfor ( int i=0; i<n2; ++i )\r\n\t{\r\n\t\tscanf(\"%d\", &m[i]);\r\n\t\tif ( m[i]>=n || m[i]<0 ) printf(\"Not Found\\n\");\r\n\t\telse\r\n\t\t{\r\n\t\t\tprintf(\"%s %s %s %c %s\\n\", p[m[i]].name, p[m[i]].home, p[m[i]].cell, p[m[i]].sex, p[m[i]].birth);\r\n\t\t}\r\n\t}\r\n\treturn 0;\t\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "11_1.c",
+      "sha256": "5c9f967b06852a11dd256c4d0ba29a73268d0816a113076bc7002ba5c7d40044",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-2_0",
+    "title": "整数四则运算",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "变量",
+      "运算符",
+      "表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a, b;\r\n\tscanf(\"%d %d\", &a, &b);\r\n\tprintf(\"%d + %d = %d\\n\", a, b, a+b);\r\n\tprintf(\"%d - %d = %d\\n\", a, b, a-b);\r\n\tprintf(\"%d * %d = %d\\n\", a, b, a*b);\r\n\tprintf(\"%d / %d = %d\\n\", a, b, a/b);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "2_0.c",
+      "sha256": "a00d46f0d4ce0a9c0808287a81ba5fbb3bc509b6427519c61d8497313ab89561",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-2_1",
+    "title": "厘米换算英尺英寸",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "变量",
+      "运算符",
+      "表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a;\r\n\tscanf(\"%d\", &a);\r\n\tint b = a/30.48;\r\n\tint c = (a/30.48-b)*12;\r\n\tprintf(\"%d %d\\n\", b, c);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "2_1.c",
+      "sha256": "e10e822f14f38f2c6d339a3c203a4e3f17300abffe607620d367335cefcf0ac0",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-2_2",
+    "title": "然后是几点",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "变量",
+      "运算符",
+      "表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a, b;\r\n\tscanf(\"%d %d\", &a, &b);\r\n\tint hh=a/100;\r\n\tint mm=a%100+b;\r\n\twhile ( mm>59 )\r\n\t{\r\n\t\thh += 1;\r\n\t\tmm -=60;\r\n\t}\r\n\twhile ( mm<0 )\r\n\t{\r\n\t\thh -= 1;\r\n\t\tmm += 60;\r\n\t}\r\n\tprintf(\"%d%02d\\n\", hh, mm);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "2_2.c",
+      "sha256": "593f37b0f2276a4b8b24bc23c954d07d91539d1433a72fc0c1e85ece1a9e8ded",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-2_3",
+    "title": "逆序的三位数",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "变量",
+      "运算符",
+      "表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a;\r\n\tscanf(\"%d\", &a);\r\n\tint d = a%10*100 + a%100-a%10 + a/100;\r\n\tprintf(\"%d\\n\", d);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "2_3.c",
+      "sha256": "db7c5966ce3045ad09427d1e758fc96db6dac79f78eef9265b04fd9648ff5c7b",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-2_4",
+    "title": "BCD解密",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "变量",
+      "运算符",
+      "表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tscanf(\"%d\", &n);\r\n\tprintf(\"%x\\n\", n);\r\n\treturn 0;\r\n}\r\n\r\n//BCD - Binary-Coded Decimal\r\n//0000 = 0\r\n//0001 = 1\r\n//0010 = 2\r\n//0011 = 3\r\n//...\r\n//1001 = 9\r\n\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "2_4.c",
+      "sha256": "722a30c9159e9e6811ea81d8264f302e95916fa4876fe199f924c0d944f5c559",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-3_0",
+    "title": "超速判断",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "条件判断",
+      "分支",
+      "逻辑表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tscanf(\"%d\", &n);\r\n\tif ( n>60 ) printf(\"Speed: %d - Speeding\\n\", n);\r\n\telse printf(\"Speed: %d - OK\\n\", n);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "3_0.c",
+      "sha256": "b0e75da1f69adcd2c7cf279a6f7c76698417e3b776479213185560e5602642e0",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-3_1",
+    "title": "三天打鱼两天晒网",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "条件判断",
+      "分支",
+      "逻辑表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tscanf(\"%d\", &n);\r\n\tint c = n%5;\r\n\tif ( c==0 || c==4 ) printf(\"Drying in day %d\\n\", n);\r\n\telse printf(\"Fishing in day %d\\n\", n);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "3_1.c",
+      "sha256": "8cb687cd23d38d1d762828dbdb5244e09c2a7d2895b265cfcadeba8621e4984f",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-3_2",
+    "title": "用天平找小球",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "条件判断",
+      "分支",
+      "逻辑表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a, b, c;\r\n\tscanf(\"%d %d %d\", &a, &b, &c);\r\n\tif ( a == b ) printf(\"C\\n\");\r\n\telse if ( a == c) printf(\"B\\n\");\r\n\telse printf(\"A\\n\");\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "3_2.c",
+      "sha256": "e7bf9de86f4c44206f63b6771ac586ecf033dd9bb77411f51fbc38adb711affa",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-3_3",
+    "title": "12-24小时制",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "条件判断",
+      "分支",
+      "逻辑表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint h, m;\r\n\tscanf(\"%d:%d\", &h, &m);\r\n\tif ( h==12 ) printf(\"%d:%d PM\\n\", h, m);\r\n\telse if ( h>12 ) printf(\"%d:%d PM\\n\", h-12, m);\r\n\telse printf(\"%d:%d AM\\n\", h, m);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "3_3.c",
+      "sha256": "fc871ca687a181716f2ec28e48d3f7d98b22dc3fd3bba55d02fb4d4e67fdc709",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-3_4",
+    "title": "成绩转换",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "条件判断",
+      "分支",
+      "逻辑表达式"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tscanf(\"%d\", &n);\r\n\tif ( n>=90 ) printf(\"A\\n\");\r\n\telse if ( n>=80 ) printf(\"B\\n\");\r\n\telse if ( n>=70 ) printf(\"C\\n\");\r\n\telse if ( n>=60 ) printf(\"D\\n\"); \r\n\telse printf(\"E\\n\");\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "3_4.c",
+      "sha256": "7a2ff409738f7508122460c8dc467a808c50f6ec1a3daac2c9995cdbc7fbc134",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-4_0",
+    "title": "求符合给定条件的整数集",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环结构",
+    "topics": [
+      "循环",
+      "嵌套循环",
+      "素数"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a;\r\n\tint count=0;\r\n\tscanf(\"%d\", &a);\r\n\tfor ( int i=a; i<a+4; i++ )\r\n\t{\r\n\t\tfor ( int j=a; j<a+4; j++ )\r\n\t\t{\r\n\t\t\tfor (int k=a; k<a+4; k++ )\r\n\t\t\t{\r\n\t\t\t\tif ( i!=j && i!=k && j!=k ) \r\n\t\t\t\t{\r\n\t\t\t\t\tcount++;\r\n\t\t\t\t\tprintf(\"%d%d%d\", i, j, k); \r\n\t\t\t\t\tif ( count%6==0 ) printf(\"\\n\");\r\n\t\t\t\t\telse printf(\" \");\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "4_0.c",
+      "sha256": "a51a828623e3937337006721f53e6db45e8f45e016a9cdea7aae4443f5975045",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-4_1",
+    "title": "水仙花数",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环结构",
+    "topics": [
+      "循环",
+      "嵌套循环",
+      "素数"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n, min=1;\r\n\tscanf(\"%d\", &n);\r\n\tfor ( int i=1; i<n; i++ ) min*=10;\r\n\tfor ( int i=min; i<min*10; i++ )\r\n\t{\r\n\t\tint sum=0, f=i;\r\n\t\tfor ( int j=0; j<n; j++ )\r\n\t\t{\r\n\t\t\tint x=f%10;\r\n\t\t\tint m=1;\r\n\t\t\tfor ( int k=0; k<n; k++ ) m *= x;\r\n\t\t\tsum += m;\r\n\t\t\tf = (f-x)/10;\r\n\t\t}\r\n\t\tif ( sum==i ) printf(\"%d\\n\", i);\r\n\t\t\r\n\t}\r\n\treturn 0;\r\n}\r\n//using pow() would be slow\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "4_1.c",
+      "sha256": "91e37f439e4706266ca0d2899d369203d1d438c78b9705db448358ed41887831",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-4_2",
+    "title": "打印九九口诀表",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环结构",
+    "topics": [
+      "循环",
+      "嵌套循环",
+      "素数"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tscanf(\"%d\", &n);\r\n\tfor ( int i=1; i<n+1; i++ ) // i is 1st number, j is 2nd number\r\n\t{\r\n\t\tfor ( int j=1; j<n+1; j++ )\r\n\t\t{\r\n\t\t\tif ( j<=i ) printf(\"%d*%d=%d  \", j, i, j*i);\r\n\t\t\tif ( j*i<10) printf(\" \");\r\n\t\t\tif ( j==i ) \r\n\t\t\t{\r\n\t\t\t\tprintf(\"\\n\");\r\n\t\t\t\tbreak;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn 0;\r\n}\r\n\r\n/*\r\noh my, this should like this without \"check for space\"..\r\n1*1=1   check for space\r\n1*2=2   2*2=4   check for space\r\n1*3=3   2*3=6   3*3=9   check for space\r\n1*4=4   2*4=8   3*4=12  4*4=16  check for space\r\n1*5=5   2*5=10  3*5=15  4*5=20  5*5=25  check for space\r\n1*6=6   2*6=12  3*6=18  4*6=24  5*6=30  6*6=36  check for space\r\n1*7=7   2*7=14  3*7=21  4*7=28  5*7=35  6*7=42  7*7=49  check for space\r\n1*8=8   2*8=16  3*8=24  4*8=32  5*8=40  6*8=48  7*8=56  8*8=64  check for space\r\n1*9=9   2*9=18  3*9=27  4*9=36  5*9=45  6*9=54  7*9=63  8*9=72  9*9=81  check for space\r\n*/\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "4_2.c",
+      "sha256": "edfcbccb1180a2a00ff6dfca0f4d7b978d0fbbfc442e1dd8e44385b8e26e36d6",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-4_3",
+    "title": "统计素数并求和",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环结构",
+    "topics": [
+      "循环",
+      "嵌套循环",
+      "素数"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n#include <math.h>\r\n\r\nint main()\r\n{\r\n\tint a, b;\r\n\tscanf(\"%d %d\", &a, &b);\r\n\tint count=0, sum=0, check[b+1];\r\n\tfor ( int i=2; i<=b; i++ ) check[i]=1;\r\n\tfor ( int i=2; i<sqrt(b); i++ )\r\n\t{\r\n\t\tif ( check[i]==1 )\r\n\t\t{\r\n\t\t\tfor ( int j=i; j*i<=b; j++ ) check[j*i]=0;\r\n\t\t}\r\n\t}\r\n\tfor ( int i=a; i<=b; i++ )\r\n\t{\t\r\n\t\tif ( check[i]==1 ) \r\n\t\t{\r\n\t\t\tcount++;\r\n\t\t\tsum+=i;\r\n\t\t}\r\n\t}\r\n\tprintf(\"%d %d\\n\", count, sum);\r\n\treturn 0;\r\n}\r\n\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "4_3.c",
+      "sha256": "63926e811b36ec98fd9786a4897592ecb5f60f1c527aa4f61c4c77150463b9ed",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-4_4",
+    "title": "猜数字游戏",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环结构",
+    "topics": [
+      "循环",
+      "嵌套循环",
+      "素数"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint num, n;\r\n\tscanf(\"%d %d\", &num, &n);\r\n\tint guess, count=0;\r\n\tscanf(\"%d\", &guess);\r\n\twhile ( 1 )\r\n\t{\r\n\t\tcount++;\r\n\t\tif ( count>n || guess<0 ) \r\n\t\t{\r\n\t\t\tprintf(\"Game Over\\n\"); \r\n\t\t\tbreak;\t\r\n\t\t}\r\n\t\telse if ( guess==num )\r\n\t\t{\r\n\t\t\tif ( count==1 ) printf(\"Bingo!\\n\");\r\n\t\t\telse if ( count<=3 ) printf(\"Lucky You!\\n\"); \r\n\t\t\telse printf(\"Good Guess!\\n\"); \r\n\t\t\tbreak;\r\n\t\t}\r\n\t\telse if ( guess>num ) printf(\"Too big\\n\");\r\n\t\telse if ( guess<num ) printf(\"Too small\\n\");\r\n\t\tscanf(\"%d\", &guess);\r\n\t}\r\n\treturn 0;\r\n}\r\n\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "4_4.c",
+      "sha256": "26f4c9376a8306217bddece326c715c428dee91f3a96adcc43efb7e789cd57e4",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-5_0",
+    "title": "求序列前N项和",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "循环控制",
+      "函数",
+      "递归"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tdouble sum, up=2, down=1, t;\r\n\tscanf(\"%d\", &n);\r\n\tfor ( int i=0; i<n; i++ )\r\n\t{\r\n\t\tsum+=up/down;\r\n\t\tt=down;\r\n\t\tdown=up;\r\n\t\tup+=t;\r\n\t}\r\n\tprintf(\"%.2f\\n\", sum);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "5_0.c",
+      "sha256": "2e849ccf4baf1d9fe1b312837084bbed810aade7600fb6b227f4eca73616e4e3",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-5_1",
+    "title": "约分最简分式",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "循环控制",
+      "函数",
+      "递归"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint up, down, gcd=1;\r\n\tscanf(\"%d/%d\", &up, &down);\r\n\tint upcy=up, downcy=down;\r\n\twhile ( down!=0 )\r\n\t{\r\n\t\tgcd=up%down;\r\n\t\tup=down;\r\n\t\tdown=gcd;\r\n\t}\r\n\tprintf(\"%d/%d\\n\", upcy/up, downcy/up);\r\n\treturn 0;\r\n}\r\n\r\n// using Euclidean algorithm for greatest common divisor\r\n\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "5_1.c",
+      "sha256": "bebfa401108f356f604aecbc5100d90baa05a0cb7e21e84af8626520ce32b34b",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-5_2",
+    "title": "念数字",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "循环控制",
+      "函数",
+      "递归"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n, len=1, x;\r\n\tscanf(\"%d\", &n);\r\n\tif ( n<0 ) \r\n\t{\r\n\t\tprintf(\"fu \");\r\n\t\tn = -n;\r\n\t}\r\n\tfor ( int i=n; i>10; i/=10 ) len*=10; //get length\r\n\twhile (n>=0)\r\n\t{\r\n\t\tx=n/len;\r\n\t\tswitch (x)\r\n\t\t{\r\n\t\t\tcase 0: printf(\"ling\"); break;\r\n\t\t\tcase 1: printf(\"yi\"); break;\r\n\t\t\tcase 2: printf(\"er\"); break;\r\n\t\t\tcase 3: printf(\"san\"); break;\r\n\t\t\tcase 4: printf(\"si\"); break;\r\n\t\t\tcase 5: printf(\"wu\"); break;\r\n\t\t\tcase 6: printf(\"liu\"); break;\r\n\t\t\tcase 7: printf(\"qi\"); break;\r\n\t\t\tcase 8: printf(\"ba\"); break;\r\n\t\t\tcase 9: printf(\"jiu\"); break;\r\n\t\t}\r\n\t\tif ( len<10 ) break;\r\n\t\tprintf(\" \");\r\n\t\tn-=x*len;\r\n\t\tlen/=10;\r\n\t}\r\n\tprintf(\"\\n\");\r\n\treturn 0;\r\n}\r\n\r\n\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "5_2.c",
+      "sha256": "771e1a4b7d519e3d929db942548bce3e81d90f805b0f6f427bb104149bd84b51",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-5_3",
+    "title": "求a的连续和",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "循环控制",
+      "函数",
+      "递归"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a, n;\r\n\tscanf(\"%d %d\", &a, &n);\t\r\n\tint x=a, sum;\r\n\tfor ( int i=0; i<n; i++ )\r\n\t{\r\n\t\tsum+=x;\r\n\t\tx=x*10+a;\r\n\t}\r\n\tprintf(\"%d\\n\", sum);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "5_3.c",
+      "sha256": "0fdce3a1e6809b84a816678c83d411d551da0cf45a207098bcbd1098550d38ac",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-6_0",
+    "title": "混合类型数据格式化输入",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数据类型与字符处理",
+    "topics": [
+      "数据类型",
+      "类型转换",
+      "字符",
+      "字符串"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tdouble one, two;\r\n\tchar c;\r\n\tscanf(\"%lf %d %c %lf\", &one, &n, &c, &two);\r\n\tprintf(\"%c %d %.2f %.2f\\n\", c, n, one, two);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "6_0.c",
+      "sha256": "f954c871c851731c3d866e72908df362606450539e011f46a57609f219303ac9",
+      "readmeScore": "5",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-6_1",
+    "title": "简单计算器",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数据类型与字符处理",
+    "topics": [
+      "数据类型",
+      "类型转换",
+      "字符",
+      "字符串"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n, k, flag=0;\r\n\tscanf(\"%d\", &n);\r\n\tchar x;\r\n\tscanf(\"%c\", &x);\r\n\twhile ( x!='=' )\r\n\t{\r\n\t\tscanf(\"%d\", &k);\r\n\t\tif ( x=='+' ) n+=k;\r\n\t\telse if ( x=='-' ) n-=k;\r\n\t\telse if ( x=='*' ) n*=k;\r\n\t\telse if ( x=='/' && k!=0 ) n/=k;\r\n\t\telse flag=1;\t\r\n\t\tscanf(\"%c\", &x);\r\n\t}\r\n\tif ( flag ) printf(\"ERROR\\n\");\r\n\telse printf(\"%d\\n\", n);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "6_1.c",
+      "sha256": "6cce14ca34a5b7e0dbfbc0c0ad217e55a1afd6f10f7afeb79568e0ee79e3b2c0",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-6_2",
+    "title": "字符串字母大小写转换",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数据类型与字符处理",
+    "topics": [
+      "数据类型",
+      "类型转换",
+      "字符",
+      "字符串"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tchar c;\r\n\tscanf(\"%c\", &c);\r\n\twhile ( c!='#' )\r\n\t{\r\n\t\tif ( c>='a' && c<='z' ) c-=32;\r\n\t\telse if ( c>='A' && c<='Z' ) c+=32;\r\n\t\tprintf(\"%c\", c);\r\n\t\tscanf(\"%c\", &c);\r\n\t}\r\n\tprintf(\"\\n\");\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "6_2.c",
+      "sha256": "878aa8d891fdff0b60fba73886feaf7f35a2171a2e6bb707f6f65262b26bad49",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-6_3",
+    "title": "单词长度",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数据类型与字符处理",
+    "topics": [
+      "数据类型",
+      "类型转换",
+      "字符",
+      "字符串"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n#include <string.h>\r\n\r\nint main()\r\n{\r\n\tint l=0, n=0;\r\n\tchar a[1001];\r\n\tchar *p;\r\n\twhile ( (a[l]=getchar())!='\\n' ) l++;\r\n\ta[l]='\\0';\r\n\tp=strtok(a, \" .\");    //split\r\n\twhile ( p!=NULL )\r\n\t{ \r\n\t\tn=strlen(p);\r\n\t\tp=strtok(NULL, \" .\");\r\n\t\tif ( p!=NULL ) printf(\"%d \", n);\r\n\t\telse printf(\"%d\\n\", n);\r\n\t}\r\n\treturn 0;\r\n}\t\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "6_3.c",
+      "sha256": "57d9b84f64c2630691dab2a92bf89fbc03034fc46ab6f7d2636c4bd834b5aa70",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-7_0",
+    "title": "写出这个数",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "整数",
+      "格式化输出"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tchar x;\r\n\tint sum=0, s, len=1;\r\n\tdo\r\n\t{\r\n\t\tscanf(\"%c\", &x);\r\n\t\tif ( x!='\\n' ) sum += x-'1'+1;\r\n\t} while ( x!='\\n' );\r\n\r\n\tfor ( int i=sum; i>10; i/=10 ) len*=10; \r\n\t\r\n\tfor ( ; len>0; len/=10 )\r\n\t{\r\n\t\ts=sum/len;\r\n\t\tsum-=s*len;\r\n\t\tswitch (s)\r\n\t\t{\t\r\n\t\t\tcase 0: printf(\"ling\"); break;\r\n\t\t\tcase 1: printf(\"yi\"); break;\r\n\t\t\tcase 2: printf(\"er\"); break;\r\n\t\t\tcase 3: printf(\"san\"); break;\r\n\t\t\tcase 4: printf(\"si\"); break;\r\n\t\t\tcase 5: printf(\"wu\"); break;\r\n\t\t\tcase 6: printf(\"liu\"); break;\r\n\t\t\tcase 7: printf(\"qi\"); break;\r\n\t\t\tcase 8: printf(\"ba\"); break;\r\n\t\t\tcase 9: printf(\"jiu\"); break;\r\n\t\t}\r\n\t\tif ( len>1 ) printf(\" \");\t\t\r\n\t}\r\n\tprintf(\"\\n\");\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "7_0.c",
+      "sha256": "09f272817de7301789164ffb03c5935b7461a4007ffcae8268ba7f50af60f431",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-7_1",
+    "title": "换个格式输出整数",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "整数",
+      "格式化输出"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n, b, s, g;\r\n\tscanf(\"%d\", &n);\r\n\tif ( n>=100 )\r\n\t{\r\n\t\tb=n/100;\r\n\t\tn=n%100;\r\n\t\tfor ( int i=0; i<b; i++ ) printf(\"B\");\r\n\t}\r\n\tif ( n>=10 )\r\n\t{\r\n\t\ts=n/10;\r\n\t\tn=n%10;\r\n\t\tfor ( int i=0; i<s; i++ ) printf(\"S\");\r\n\t}\r\n\tfor ( int i=0; i<n; i++ ) printf(\"%d\", i+1);\r\n\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "7_1.c",
+      "sha256": "9c76aedd3c2fca4ea04f8eca8743504bebbfbbbca2e885c146669bf644ddf414",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-7_2",
+    "title": "A+B和C",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "整数",
+      "格式化输出"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n;\r\n\tlong long a, b, c;\r\n\tscanf(\"%d\", &n);\r\n\tfor ( int i=0; i<n; i++ )\r\n\t{\t\r\n\t\tscanf(\"%lld %lld %lld\", &a, &b, &c);\r\n\t\tif ( (a+b)>c ) printf(\"Case #%d: true\\n\", i+1);\r\n\t\telse printf(\"Case #%d: false\\n\", i+1);\r\n\t}\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "7_2.c",
+      "sha256": "5fdc3165510a3916ecfebc19bbc331e1154c6732308097b9c758102f0d130d66",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-7_3",
+    "title": "数素数",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "整数",
+      "格式化输出"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n#include <math.h>\r\n\r\nint main()\r\n{\r\n\tint m, n, s=105000, count=0;\r\n\tscanf(\"%d %d\", &m, &n);\r\n\tint check[s+1];\r\n\tfor ( int i=2; i<s; i++ ) check[i]=1;\r\n\tfor ( int i=2; i<sqrt(s); i++ )\r\n\t{\r\n\t\tif ( check[i]==1 ) \r\n\t\t{\r\n\t\t\tfor ( int j=i; j*i<s; j++ ) check[j*i]=0;\r\n\t\t}\r\n\t}\r\n\tfor ( int i=2; i<s; i++ )\t\r\n\t{\r\n\t\tif ( check[i]==1 )\r\n\t\t{\r\n\t\t\tcount++;\r\n\t\t\tif ( count>=m && count<=n ) \r\n\t\t\t{\r\n\t\t\t\tprintf(\"%d\", i);\r\n\t\t\t\tif ( (count-m+1)%10==0 ) printf(\"\\n\");\r\n\t\t\t\telse if ( count==n ) break;\r\n\t\t\t\telse printf(\" \");\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "7_3.c",
+      "sha256": "249a947a256ceebf7a426af6d06ae90d082b45bdac55883f3597ddbab31b0ea8",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-8_0",
+    "title": "查找整数",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "二维数组与综合练习",
+    "topics": [
+      "二维数组",
+      "查找",
+      "排序"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n, x, a, flag=1;\r\n\tscanf(\"%d %d\", &n, &x);\r\n\tfor ( int i=0; i<n; i++ )\r\n\t{\r\n\t\tscanf(\"%d\", &a);\r\n\t\tif ( a==x ) \r\n\t\t{\r\n\t\t\tprintf(\"%d\\n\", i);\r\n\t\t\tflag=0;\r\n\t\t\tbreak;\r\n\t\t}\r\n\t}\r\n\tif ( flag ) printf(\"Not Found\\n\");\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "8_0.c",
+      "sha256": "1bfc0068f202986d784b07298d385d8d98e1e83339d3e1cbbcc1978092a4d10a",
+      "readmeScore": "10",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-8_1",
+    "title": "求一批整数中出现最多的个位数字",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "二维数组与综合练习",
+    "topics": [
+      "二维数组",
+      "查找",
+      "排序"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint n, x, a[10], l, max=0;\r\n\tscanf(\"%d\", &n);\r\n\tfor ( int i=0; i<10; i++ ) a[i]=0;\t\r\n\tfor ( int i=0; i<n; i++ )\r\n\t{\r\n\t\tscanf(\"%d\", &x);\r\n\t\twhile ( x>0 )\r\n\t\t{\r\n\t\t\tl=x%10;\r\n\t\t\ta[l]++;\r\n\t\t\tx/=10;\r\n\t\t\tif ( a[l]>max ) max=a[l];\r\n\t\t}\t\t\r\n\t}\t\r\n\tprintf(\"%d:\", max);\r\n\tfor ( int i=0; i<10; i++ )\r\n\t{\r\n\t\tif ( a[i]==max ) printf(\" %d\", i);\r\n\t}\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "8_1.c",
+      "sha256": "dc64a45df3a6b223df27afee3d1fe89ebc5bfb615456d46aec7933c7cff37253",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-8_2",
+    "title": "求矩阵的局部极大值",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "二维数组与综合练习",
+    "topics": [
+      "二维数组",
+      "查找",
+      "排序"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint m, n, flag=1;\r\n\tscanf(\"%d %d\", &m, &n);\r\n\tint a[m][n];\r\n\tfor ( int i=0; i<m; i++ )\r\n\t{\r\n\t\tfor ( int j=0; j<n; j++ )\r\n\t\t{\t\r\n\t\t\tscanf(\"%d\", &a[i][j]);\r\n\t\t}\r\n\t}\r\n\tfor ( int i=1; i<m-1; i++ )\r\n\t{\r\n\t\tfor ( int j=1; j<n-1; j++ )\r\n\t\t{\r\n\t\t\tif ( a[i][j]>a[i][j-1] && a[i][j]>a[i-1][j] \r\n\t\t\t\t&& a[i][j]>a[i+1][j] && a[i][j]>a[i][j+1] )\r\n\t\t\t{\r\n\t\t\t\tprintf(\"%d %d %d\\n\", a[i][j], i+1, j+1);\r\n\t\t\t\tflag=0;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\tif ( flag ) printf(\"None %d %d\\n\", m, n);\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "8_2.c",
+      "sha256": "57b713e73e7899651a4f962f99328c89635d9828a04db2eaa869e647784d5801",
+      "readmeScore": "15",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  },
+  {
+    "id": "pat-8_3",
+    "title": "组个最小数",
+    "source": "中国大学 MOOC 翁恺 C 语言程序设计习题集（本地练习仓库）",
+    "chapter": "二维数组与综合练习",
+    "topics": [
+      "二维数组",
+      "查找",
+      "排序"
+    ],
+    "difficulty": "待审核",
+    "statement": null,
+    "constraints": null,
+    "inputFormat": null,
+    "outputFormat": null,
+    "examples": [],
+    "hints": [],
+    "explanation": null,
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\r\n\r\nint main()\r\n{\r\n\tint a[10];\r\n\tfor ( int i=0; i<10; i++ ) scanf(\"%d\", &a[i]);\r\n\tint k=1;\r\n\twhile ( a[k]==0 ) k+=1;\r\n\twhile ( a[k]!=0 )\r\n\t{\r\n\t\tprintf(\"%d\", k); \r\n\t\ta[k]--;\r\n\t\tbreak;\r\n\t}\r\n\tk=0;\r\n\twhile ( a[k]>=0 && k<10 )\r\n\t{\r\n\t\tif ( a[k]!=0 ) \r\n\t\t{\r\n\t\t\tprintf(\"%d\", k);\r\n\t\t\ta[k]--;\r\n\t\t}\r\n\t\telse k++;\r\n\t}\r\n\treturn 0;\r\n}\r\n",
+    "testCases": [],
+    "provenance": {
+      "path": "8_3.c",
+      "sha256": "e55361528aede7b378e442e4e25f0d864acefeb46f63bd245fb7f8fbd3a4c0dd",
+      "readmeScore": "20",
+      "contentStatus": "only source code and README title are available"
+    },
+    "reviewStatus": "source-imported-needs-statement-and-tests"
+  }
+]
