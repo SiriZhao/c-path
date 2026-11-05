@@ -10,7 +10,7 @@ def main() -> None:
     compiler = shutil.which("gcc") or shutil.which("clang")
     if not compiler:
         raise SystemExit("No gcc or clang found; originals are NOT_VERIFIED")
-    originals = json.loads((ROOT / "src/data/originals.json").read_text(encoding="utf-8"))
+    originals = json.loads((ROOT / "src/data/originals.json").read_text(encoding="utf-8")) + json.loads((ROOT / "src/data/originals-phase6.json").read_text(encoding="utf-8"))
     failures = []
     work = ROOT / ".validation-tmp"
     if work.exists():

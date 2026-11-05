@@ -1,0 +1,2738 @@
+[
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "三个整数绝对值不超过 100000。",
+    "id": "orig-sum-three-integers",
+    "title": "三个整数求和",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "scanf",
+      "整数运算",
+      "表达式"
+    ],
+    "difficulty": "入门",
+    "statement": "读取三个整数，输出它们的总和。",
+    "inputFormat": "一行包含三个整数。",
+    "outputFormat": "输出三个整数的和，单独占一行。",
+    "examples": [
+      {
+        "input": "1 2 3\n",
+        "output": "6"
+      },
+      {
+        "input": "-5 0 8\n",
+        "output": "3"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 scanf 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过scanf练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b,c;if(scanf(\"%d%d%d\",&a,&b,&c)!=3)return 1;printf(\"%d\\n\",a+b+c);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "1 2 3\n",
+        "expectedOutput": "6\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-5 0 8\n",
+        "expectedOutput": "3\n"
+      },
+      {
+        "id": "case-3",
+        "input": "100 200 -50\n",
+        "expectedOutput": "250\n"
+      },
+      {
+        "id": "case-4",
+        "input": "0 0 0\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-5",
+        "input": "-100000 1 100000\n",
+        "expectedOutput": "1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "a、b 的绝对值不超过 1000。",
+    "id": "orig-arithmetic-expression",
+    "title": "整数表达式计算",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "运算符",
+      "优先级",
+      "整数"
+    ],
+    "difficulty": "入门",
+    "statement": "给定两个整数 a 和 b，计算 a×a + b×b - a×b。",
+    "inputFormat": "一行包含两个整数 a 和 b。",
+    "outputFormat": "输出表达式的整数结果。",
+    "examples": [
+      {
+        "input": "2 3\n",
+        "output": "7"
+      },
+      {
+        "input": "-2 5\n",
+        "output": "39"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 运算符 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过运算符练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n\",a*a+b*b-a*b);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "2 3\n",
+        "expectedOutput": "7\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-2 5\n",
+        "expectedOutput": "39\n"
+      },
+      {
+        "id": "case-3",
+        "input": "0 9\n",
+        "expectedOutput": "81\n"
+      },
+      {
+        "id": "case-4",
+        "input": "10 10\n",
+        "expectedOutput": "100\n"
+      },
+      {
+        "id": "case-5",
+        "input": "-100 -20\n",
+        "expectedOutput": "8400\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "输入温度在 -100 到 100 之间。",
+    "id": "orig-celsius-convert",
+    "title": "摄氏温度转换",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "浮点数",
+      "类型转换",
+      "printf"
+    ],
+    "difficulty": "基础",
+    "statement": "把摄氏温度转换为华氏温度，公式为 F = C × 9 / 5 + 32。",
+    "inputFormat": "输入一个实数摄氏温度。",
+    "outputFormat": "输出华氏温度，保留一位小数。",
+    "examples": [
+      {
+        "input": "0\n",
+        "output": "32.0"
+      },
+      {
+        "input": "100\n",
+        "output": "212.0"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 浮点数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过浮点数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){double c;if(scanf(\"%lf\",&c)!=1)return 1;printf(\"%.1f\\n\",c*9.0/5.0+32.0);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "0\n",
+        "expectedOutput": "32.0\n"
+      },
+      {
+        "id": "case-2",
+        "input": "100\n",
+        "expectedOutput": "212.0\n"
+      },
+      {
+        "id": "case-3",
+        "input": "-40\n",
+        "expectedOutput": "-40.0\n"
+      },
+      {
+        "id": "case-4",
+        "input": "36.5\n",
+        "expectedOutput": "97.7\n"
+      },
+      {
+        "id": "case-5",
+        "input": "12.3\n",
+        "expectedOutput": "54.1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "长和宽不超过 1000。",
+    "id": "orig-rectangle-metrics",
+    "title": "矩形的面积与周长",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "变量",
+      "乘法",
+      "格式化输出"
+    ],
+    "difficulty": "入门",
+    "statement": "读取矩形的长和宽，输出面积与周长。",
+    "inputFormat": "一行包含两个正整数长和宽。",
+    "outputFormat": "第一行输出面积，第二行输出周长。",
+    "examples": [
+      {
+        "input": "3 4\n",
+        "output": "12\n14"
+      },
+      {
+        "input": "1 8\n",
+        "output": "8\n18"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 变量 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过变量练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n%d\\n\",a*b,2*(a+b));return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3 4\n",
+        "expectedOutput": "12\n14\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1 8\n",
+        "expectedOutput": "8\n18\n"
+      },
+      {
+        "id": "case-3",
+        "input": "10 10\n",
+        "expectedOutput": "100\n40\n"
+      },
+      {
+        "id": "case-4",
+        "input": "7 2\n",
+        "expectedOutput": "14\n18\n"
+      },
+      {
+        "id": "case-5",
+        "input": "1000 999\n",
+        "expectedOutput": "999000\n3998\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "输入在 int 范围内。",
+    "id": "orig-sign-classification",
+    "title": "正数、负数还是零",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "if",
+      "比较",
+      "分类"
+    ],
+    "difficulty": "入门",
+    "statement": "判断一个整数是正数、负数还是零。",
+    "inputFormat": "输入一个整数。",
+    "outputFormat": "正数输出 positive，负数输出 negative，零输出 zero。",
+    "examples": [
+      {
+        "input": "-3\n",
+        "output": "negative"
+      },
+      {
+        "input": "0\n",
+        "output": "zero"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 if 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过if练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;if(n>0)puts(\"positive\");else if(n<0)puts(\"negative\");else puts(\"zero\");return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "-3\n",
+        "expectedOutput": "negative\n"
+      },
+      {
+        "id": "case-2",
+        "input": "0\n",
+        "expectedOutput": "zero\n"
+      },
+      {
+        "id": "case-3",
+        "input": "8\n",
+        "expectedOutput": "positive\n"
+      },
+      {
+        "id": "case-4",
+        "input": "-100000\n",
+        "expectedOutput": "negative\n"
+      },
+      {
+        "id": "case-5",
+        "input": "1\n",
+        "expectedOutput": "positive\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "年份在 1 到 9999 之间。",
+    "id": "orig-leap-year",
+    "title": "判断闰年",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "条件判断",
+      "逻辑表达式",
+      "年份"
+    ],
+    "difficulty": "基础",
+    "statement": "判断给定年份是否为闰年。能被 400 整除，或能被 4 整除但不能被 100 整除的年份是闰年。",
+    "inputFormat": "输入一个正整数年份。",
+    "outputFormat": "闰年输出 leap，平年输出 common。",
+    "examples": [
+      {
+        "input": "2000\n",
+        "output": "leap"
+      },
+      {
+        "input": "1900\n",
+        "output": "common"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 条件判断 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过条件判断练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int y;if(scanf(\"%d\",&y)!=1)return 1;if(y%400==0||(y%4==0&&y%100!=0))puts(\"leap\");else puts(\"common\");return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "2000\n",
+        "expectedOutput": "leap\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1900\n",
+        "expectedOutput": "common\n"
+      },
+      {
+        "id": "case-3",
+        "input": "2024\n",
+        "expectedOutput": "leap\n"
+      },
+      {
+        "id": "case-4",
+        "input": "2023\n",
+        "expectedOutput": "common\n"
+      },
+      {
+        "id": "case-5",
+        "input": "4\n",
+        "expectedOutput": "leap\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "成绩一定在 0 到 100 之间。",
+    "id": "orig-score-level",
+    "title": "成绩等级",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "if-else",
+      "区间判断",
+      "比较"
+    ],
+    "difficulty": "基础",
+    "statement": "根据百分制成绩输出等级：90–100 为 A，80–89 为 B，60–79 为 C，0–59 为 D。",
+    "inputFormat": "输入一个 0 到 100 的整数成绩。",
+    "outputFormat": "输出一个大写字母等级。",
+    "examples": [
+      {
+        "input": "100\n",
+        "output": "A"
+      },
+      {
+        "input": "90\n",
+        "output": "A"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 if-else 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过if-else练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int s;if(scanf(\"%d\",&s)!=1)return 1;if(s>=90)puts(\"A\");else if(s>=80)puts(\"B\");else if(s>=60)puts(\"C\");else puts(\"D\");return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "100\n",
+        "expectedOutput": "A\n"
+      },
+      {
+        "id": "case-2",
+        "input": "90\n",
+        "expectedOutput": "A\n"
+      },
+      {
+        "id": "case-3",
+        "input": "89\n",
+        "expectedOutput": "B\n"
+      },
+      {
+        "id": "case-4",
+        "input": "60\n",
+        "expectedOutput": "C\n"
+      },
+      {
+        "id": "case-5",
+        "input": "59\n",
+        "expectedOutput": "D\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "每条边不超过 1000。",
+    "id": "orig-triangle-validity",
+    "title": "三角形能否成立",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "条件判断",
+      "逻辑运算",
+      "边界"
+    ],
+    "difficulty": "基础",
+    "statement": "判断三条线段能否组成三角形。任意两边之和必须大于第三边。",
+    "inputFormat": "输入三个正整数边长。",
+    "outputFormat": "可以组成三角形输出 yes，否则输出 no。",
+    "examples": [
+      {
+        "input": "3 4 5\n",
+        "output": "yes"
+      },
+      {
+        "input": "1 2 3\n",
+        "output": "no"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 条件判断 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过条件判断练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b,c;if(scanf(\"%d%d%d\",&a,&b,&c)!=3)return 1;puts(a+b>c&&a+c>b&&b+c>a?\"yes\":\"no\");return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3 4 5\n",
+        "expectedOutput": "yes\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1 2 3\n",
+        "expectedOutput": "no\n"
+      },
+      {
+        "id": "case-3",
+        "input": "5 5 9\n",
+        "expectedOutput": "yes\n"
+      },
+      {
+        "id": "case-4",
+        "input": "2 2 5\n",
+        "expectedOutput": "no\n"
+      },
+      {
+        "id": "case-5",
+        "input": "10 6 8\n",
+        "expectedOutput": "yes\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "n 不超过 10000，结果在 long long 范围内。",
+    "id": "orig-sum-to-n",
+    "title": "从 1 加到 n",
+    "chapter": "循环结构",
+    "topics": [
+      "for",
+      "累加",
+      "循环边界"
+    ],
+    "difficulty": "入门",
+    "statement": "计算 1 + 2 + … + n 的结果。",
+    "inputFormat": "输入一个正整数 n。",
+    "outputFormat": "输出累加结果。",
+    "examples": [
+      {
+        "input": "1\n",
+        "output": "1"
+      },
+      {
+        "input": "5\n",
+        "output": "15"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 for 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过for练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;long long sum=0;for(int i=1;i<=n;i++)sum+=i;printf(\"%lld\\n\",sum);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "1\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "5\n",
+        "expectedOutput": "15\n"
+      },
+      {
+        "id": "case-3",
+        "input": "10\n",
+        "expectedOutput": "55\n"
+      },
+      {
+        "id": "case-4",
+        "input": "100\n",
+        "expectedOutput": "5050\n"
+      },
+      {
+        "id": "case-5",
+        "input": "10000\n",
+        "expectedOutput": "50005000\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "n 的绝对值不超过 10000。",
+    "id": "orig-multiples-of-n",
+    "title": "输出 n 的前五个倍数",
+    "chapter": "循环结构",
+    "topics": [
+      "for",
+      "循环输出",
+      "格式化输出"
+    ],
+    "difficulty": "入门",
+    "statement": "输出 n 的前五个正整数倍数，每个倍数占一行。",
+    "inputFormat": "输入一个整数 n。",
+    "outputFormat": "依次输出 n、2n、3n、4n、5n。",
+    "examples": [
+      {
+        "input": "3\n",
+        "output": "3\n6\n9\n12\n15"
+      },
+      {
+        "input": "-2\n",
+        "output": "-2\n-4\n-6\n-8\n-10"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 for 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过for练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=5;i++)printf(\"%d\\n\",n*i);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3\n",
+        "expectedOutput": "3\n6\n9\n12\n15\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-2\n",
+        "expectedOutput": "-2\n-4\n-6\n-8\n-10\n"
+      },
+      {
+        "id": "case-3",
+        "input": "0\n",
+        "expectedOutput": "0\n0\n0\n0\n0\n"
+      },
+      {
+        "id": "case-4",
+        "input": "7\n",
+        "expectedOutput": "7\n14\n21\n28\n35\n"
+      },
+      {
+        "id": "case-5",
+        "input": "100\n",
+        "expectedOutput": "100\n200\n300\n400\n500\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "n 不超过 100000。",
+    "id": "orig-count-even",
+    "title": "统计 1 到 n 的偶数个数",
+    "chapter": "循环结构",
+    "topics": [
+      "for",
+      "计数器",
+      "取模"
+    ],
+    "difficulty": "基础",
+    "statement": "统计 1 到 n 中有多少个偶数。",
+    "inputFormat": "输入一个正整数 n。",
+    "outputFormat": "输出偶数的数量。",
+    "examples": [
+      {
+        "input": "1\n",
+        "output": "0"
+      },
+      {
+        "input": "2\n",
+        "output": "1"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 for 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过for练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,count=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=n;i++)if(i%2==0)count++;printf(\"%d\\n\",count);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "1\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-2",
+        "input": "2\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "10\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-4",
+        "input": "11\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-5",
+        "input": "100\n",
+        "expectedOutput": "50\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "n 不超过 10^9。",
+    "id": "orig-sum-digits",
+    "title": "各位数字之和",
+    "chapter": "循环结构",
+    "topics": [
+      "while",
+      "取模",
+      "整数除法"
+    ],
+    "difficulty": "基础",
+    "statement": "计算一个非负整数所有数字的和。",
+    "inputFormat": "输入一个非负整数 n。",
+    "outputFormat": "输出各位数字之和。",
+    "examples": [
+      {
+        "input": "0\n",
+        "output": "0"
+      },
+      {
+        "input": "12345\n",
+        "output": "15"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 while 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过while练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;int sum=0;if(n==0)sum=0;while(n>0){sum+=n%10;n/=10;}printf(\"%d\\n\",sum);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "0\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-2",
+        "input": "12345\n",
+        "expectedOutput": "15\n"
+      },
+      {
+        "id": "case-3",
+        "input": "1000\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "9\n",
+        "expectedOutput": "9\n"
+      },
+      {
+        "id": "case-5",
+        "input": "90807\n",
+        "expectedOutput": "24\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "n 不超过 10^9。",
+    "id": "orig-reverse-number",
+    "title": "反转整数",
+    "chapter": "循环结构",
+    "topics": [
+      "while",
+      "取模",
+      "变量更新"
+    ],
+    "difficulty": "基础",
+    "statement": "输出一个整数反转数字后的结果。",
+    "inputFormat": "输入一个非负整数 n。",
+    "outputFormat": "输出反转后的整数，不保留前导零。",
+    "examples": [
+      {
+        "input": "0\n",
+        "output": "0"
+      },
+      {
+        "input": "1234\n",
+        "output": "4321"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 while 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过while练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;int r=0;while(n>0){r=r*10+n%10;n/=10;}printf(\"%d\\n\",r);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "0\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1234\n",
+        "expectedOutput": "4321\n"
+      },
+      {
+        "id": "case-3",
+        "input": "1000\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "90807\n",
+        "expectedOutput": "70809\n"
+      },
+      {
+        "id": "case-5",
+        "input": "56\n",
+        "expectedOutput": "65\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "a、b 不超过 1000000。",
+    "id": "orig-gcd",
+    "title": "最大公约数",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "函数",
+      "循环控制",
+      "取模"
+    ],
+    "difficulty": "基础",
+    "statement": "求两个正整数的最大公约数。",
+    "inputFormat": "输入两个正整数 a 和 b。",
+    "outputFormat": "输出最大公约数。",
+    "examples": [
+      {
+        "input": "12 18\n",
+        "output": "6"
+      },
+      {
+        "input": "7 13\n",
+        "output": "1"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 函数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint gcd(int a,int b){while(b){int t=a%b;a=b;b=t;}return a;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n\",gcd(a,b));return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "12 18\n",
+        "expectedOutput": "6\n"
+      },
+      {
+        "id": "case-2",
+        "input": "7 13\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "100 40\n",
+        "expectedOutput": "20\n"
+      },
+      {
+        "id": "case-4",
+        "input": "1 1\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-5",
+        "input": "81 27\n",
+        "expectedOutput": "27\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "n 在 2 到 100000 之间。",
+    "id": "orig-prime-check",
+    "title": "判断素数",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "函数",
+      "循环",
+      "除法"
+    ],
+    "difficulty": "基础",
+    "statement": "判断一个大于 1 的整数是否为素数。",
+    "inputFormat": "输入一个整数 n。",
+    "outputFormat": "素数输出 prime，否则输出 composite。",
+    "examples": [
+      {
+        "input": "2\n",
+        "output": "prime"
+      },
+      {
+        "input": "3\n",
+        "output": "prime"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 函数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint is_prime(int n){for(int i=2;i*i<=n;i++)if(n%i==0)return 0;return 1;}\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;puts(is_prime(n)?\"prime\":\"composite\");return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "2\n",
+        "expectedOutput": "prime\n"
+      },
+      {
+        "id": "case-2",
+        "input": "3\n",
+        "expectedOutput": "prime\n"
+      },
+      {
+        "id": "case-3",
+        "input": "4\n",
+        "expectedOutput": "composite\n"
+      },
+      {
+        "id": "case-4",
+        "input": "97\n",
+        "expectedOutput": "prime\n"
+      },
+      {
+        "id": "case-5",
+        "input": "100\n",
+        "expectedOutput": "composite\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "2 ≤ a ≤ b ≤ 1000。",
+    "id": "orig-count-primes",
+    "title": "统计区间内素数",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "函数",
+      "嵌套循环",
+      "素数"
+    ],
+    "difficulty": "进阶",
+    "statement": "统计闭区间 [a,b] 中素数的数量。",
+    "inputFormat": "输入两个整数 a 和 b，且 a ≤ b。",
+    "outputFormat": "输出区间内素数个数。",
+    "examples": [
+      {
+        "input": "2 10\n",
+        "output": "4"
+      },
+      {
+        "input": "10 20\n",
+        "output": "4"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 函数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint prime(int n){if(n<2)return 0;for(int i=2;i*i<=n;i++)if(n%i==0)return 0;return 1;}\nint main(void){int a,b,count=0;if(scanf(\"%d%d\",&a,&b)!=2)return 1;for(int n=a;n<=b;n++)if(prime(n))count++;printf(\"%d\\n\",count);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "2 10\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "id": "case-2",
+        "input": "10 20\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "id": "case-3",
+        "input": "2 2\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "20 22\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-5",
+        "input": "97 100\n",
+        "expectedOutput": "1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 40。",
+    "id": "orig-fibonacci-term",
+    "title": "斐波那契第 n 项",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "函数",
+      "循环",
+      "递推"
+    ],
+    "difficulty": "基础",
+    "statement": "定义 F1=1、F2=1，计算第 n 项。",
+    "inputFormat": "输入正整数 n。",
+    "outputFormat": "输出 Fn。",
+    "examples": [
+      {
+        "input": "1\n",
+        "output": "1"
+      },
+      {
+        "input": "2\n",
+        "output": "1"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 函数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;long long a=1,b=1;for(int i=3;i<=n;i++){long long t=a+b;a=b;b=t;}printf(\"%lld\\n\",n==1?a:b);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "1\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "2\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "3\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-4",
+        "input": "10\n",
+        "expectedOutput": "55\n"
+      },
+      {
+        "id": "case-5",
+        "input": "20\n",
+        "expectedOutput": "6765\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "base 不超过 10，exp 不超过 9。",
+    "id": "orig-power-loop",
+    "title": "整数幂",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "函数",
+      "循环",
+      "乘法"
+    ],
+    "difficulty": "基础",
+    "statement": "计算 base 的 exp 次方。",
+    "inputFormat": "输入两个非负整数 base 和 exp。",
+    "outputFormat": "输出幂结果。",
+    "examples": [
+      {
+        "input": "2 3\n",
+        "output": "8"
+      },
+      {
+        "input": "5 0\n",
+        "output": "1"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 函数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint power(int base,int exp){int r=1;for(int i=0;i<exp;i++)r*=base;return r;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n\",power(a,b));return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "2 3\n",
+        "expectedOutput": "8\n"
+      },
+      {
+        "id": "case-2",
+        "input": "5 0\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "10 2\n",
+        "expectedOutput": "100\n"
+      },
+      {
+        "id": "case-4",
+        "input": "0 4\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-5",
+        "input": "3 4\n",
+        "expectedOutput": "81\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "n 不超过 10^9。",
+    "id": "orig-binary-digits",
+    "title": "二进制位数",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "函数",
+      "循环",
+      "进制"
+    ],
+    "difficulty": "基础",
+    "statement": "计算非负整数用二进制表示时需要多少位。",
+    "inputFormat": "输入一个非负整数 n。",
+    "outputFormat": "输出二进制位数，0 的位数定义为 1。",
+    "examples": [
+      {
+        "input": "0\n",
+        "output": "1"
+      },
+      {
+        "input": "1\n",
+        "output": "1"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 函数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,count=0;if(scanf(\"%d\",&n)!=1)return 1;do{count++;n/=2;}while(n);printf(\"%d\\n\",count);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "0\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "2\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-4",
+        "input": "7\n",
+        "expectedOutput": "3\n"
+      },
+      {
+        "id": "case-5",
+        "input": "8\n",
+        "expectedOutput": "4\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 100，元素绝对值不超过 1000。",
+    "id": "orig-array-sum",
+    "title": "数组元素求和",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "循环",
+      "累加"
+    ],
+    "difficulty": "基础",
+    "statement": "读取一个数组并输出所有元素的和。",
+    "inputFormat": "第一行输入 n，第二行输入 n 个整数。",
+    "outputFormat": "输出数组元素之和。",
+    "examples": [
+      {
+        "input": "3\n1 2 3\n",
+        "output": "6"
+      },
+      {
+        "input": "1\n-5\n",
+        "output": "-5"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];long long sum=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&a[i]);sum+=a[i];}printf(\"%lld\\n\",sum);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3\n1 2 3\n",
+        "expectedOutput": "6\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n-5\n",
+        "expectedOutput": "-5\n"
+      },
+      {
+        "id": "case-3",
+        "input": "5\n1 -1 2 -2 3\n",
+        "expectedOutput": "3\n"
+      },
+      {
+        "id": "case-4",
+        "input": "4\n10 20 30 40\n",
+        "expectedOutput": "100\n"
+      },
+      {
+        "id": "case-5",
+        "input": "2\n0 0\n",
+        "expectedOutput": "0\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 100。",
+    "id": "orig-array-min-position",
+    "title": "数组最小值与位置",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "遍历",
+      "位置"
+    ],
+    "difficulty": "基础",
+    "statement": "输出数组中的最小值及其第一次出现的位置，位置从 1 开始。",
+    "inputFormat": "第一行输入 n，第二行输入 n 个整数。",
+    "outputFormat": "输出最小值和位置，用空格分隔。",
+    "examples": [
+      {
+        "input": "3\n4 2 8\n",
+        "output": "2 2"
+      },
+      {
+        "input": "4\n5 1 1 3\n",
+        "output": "1 2"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,min=0,pos=1;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=n;i++){scanf(\"%d\",&x);if(i==1||x<min){min=x;pos=i;}}printf(\"%d %d\\n\",min,pos);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3\n4 2 8\n",
+        "expectedOutput": "2 2\n"
+      },
+      {
+        "id": "case-2",
+        "input": "4\n5 1 1 3\n",
+        "expectedOutput": "1 2\n"
+      },
+      {
+        "id": "case-3",
+        "input": "1\n-7\n",
+        "expectedOutput": "-7 1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "5\n9 8 7 6 5\n",
+        "expectedOutput": "5 5\n"
+      },
+      {
+        "id": "case-5",
+        "input": "2\n-1 -3\n",
+        "expectedOutput": "-3 2\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 100。",
+    "id": "orig-array-positive-count",
+    "title": "数组中正数个数",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "条件判断",
+      "计数"
+    ],
+    "difficulty": "基础",
+    "statement": "统计数组中严格大于 0 的元素数量。",
+    "inputFormat": "第一行输入 n，第二行输入 n 个整数。",
+    "outputFormat": "输出正数个数。",
+    "examples": [
+      {
+        "input": "4\n-1 0 2 3\n",
+        "output": "2"
+      },
+      {
+        "input": "3\n0 0 0\n",
+        "output": "0"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,count=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&x);if(x>0)count++;}printf(\"%d\\n\",count);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "4\n-1 0 2 3\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-2",
+        "input": "3\n0 0 0\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-3",
+        "input": "5\n1 2 3 4 5\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-4",
+        "input": "1\n-9\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-5",
+        "input": "6\n-2 4 -1 0 8 3\n",
+        "expectedOutput": "3\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 100。",
+    "id": "orig-array-reverse",
+    "title": "倒序输出数组",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "下标",
+      "循环"
+    ],
+    "difficulty": "基础",
+    "statement": "读取数组后，从最后一个元素开始倒序输出。",
+    "inputFormat": "第一行输入 n，第二行输入 n 个整数。",
+    "outputFormat": "在一行中输出倒序后的元素，元素之间用一个空格分隔。",
+    "examples": [
+      {
+        "input": "3\n1 2 3\n",
+        "output": "3 2 1"
+      },
+      {
+        "input": "1\n8\n",
+        "output": "8"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);for(int i=n-1;i>=0;i--)printf(\"%d%c\",a[i],i?' ':'\\n');return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3\n1 2 3\n",
+        "expectedOutput": "3 2 1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n8\n",
+        "expectedOutput": "8\n"
+      },
+      {
+        "id": "case-3",
+        "input": "4\n-1 0 2 5\n",
+        "expectedOutput": "5 2 0 -1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "2\n7 7\n",
+        "expectedOutput": "7 7\n"
+      },
+      {
+        "id": "case-5",
+        "input": "5\n1 2 3 4 5\n",
+        "expectedOutput": "5 4 3 2 1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 100。",
+    "id": "orig-array-rotate-left",
+    "title": "数组左移一位",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "临时变量",
+      "下标"
+    ],
+    "difficulty": "基础",
+    "statement": "将数组的第一个元素移动到末尾，其余元素左移一位。",
+    "inputFormat": "第一行输入 n，第二行输入 n 个整数。",
+    "outputFormat": "输出变换后的数组，元素之间用一个空格分隔。",
+    "examples": [
+      {
+        "input": "3\n1 2 3\n",
+        "output": "2 3 1"
+      },
+      {
+        "input": "1\n9\n",
+        "output": "9"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100],first;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);first=a[0];for(int i=0;i<n-1;i++)a[i]=a[i+1];a[n-1]=first;for(int i=0;i<n;i++)printf(\"%d%c\",a[i],i==n-1?'\\n':' ');return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3\n1 2 3\n",
+        "expectedOutput": "2 3 1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n9\n",
+        "expectedOutput": "9\n"
+      },
+      {
+        "id": "case-3",
+        "input": "4\n-1 0 2 5\n",
+        "expectedOutput": "0 2 5 -1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "2\n7 8\n",
+        "expectedOutput": "8 7\n"
+      },
+      {
+        "id": "case-5",
+        "input": "5\n1 2 3 4 5\n",
+        "expectedOutput": "2 3 4 5 1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 100。",
+    "id": "orig-linear-search",
+    "title": "第一次出现的位置",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "线性查找",
+      "循环"
+    ],
+    "difficulty": "基础",
+    "statement": "在数组中查找目标值，输出它第一次出现的位置。",
+    "inputFormat": "第一行输入 n 和目标值 x，第二行输入 n 个整数。",
+    "outputFormat": "找到时输出 1-based 位置，找不到输出 -1。",
+    "examples": [
+      {
+        "input": "5 3\n1 3 4 3 8\n",
+        "output": "2"
+      },
+      {
+        "input": "3 9\n1 2 3\n",
+        "output": "-1"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,a[100],pos=-1;if(scanf(\"%d%d\",&n,&x)!=2)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&a[i]);if(pos==-1&&a[i]==x)pos=i+1;}printf(\"%d\\n\",pos);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "5 3\n1 3 4 3 8\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-2",
+        "input": "3 9\n1 2 3\n",
+        "expectedOutput": "-1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "1 7\n7\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "4 -1\n2 -1 -1 3\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-5",
+        "input": "5 0\n1 2 3 4 5\n",
+        "expectedOutput": "-1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 100。",
+    "id": "orig-bubble-sort",
+    "title": "冒泡排序",
+    "chapter": "数组与数字处理",
+    "topics": [
+      "数组",
+      "嵌套循环",
+      "排序"
+    ],
+    "difficulty": "进阶",
+    "statement": "使用冒泡排序将数组从小到大排列。",
+    "inputFormat": "第一行输入 n，第二行输入 n 个整数。",
+    "outputFormat": "输出升序数组，元素之间用一个空格分隔。",
+    "examples": [
+      {
+        "input": "3\n3 1 2\n",
+        "output": "1 2 3"
+      },
+      {
+        "input": "1\n5\n",
+        "output": "5"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);for(int i=0;i<n-1;i++)for(int j=0;j<n-1-i;j++)if(a[j]>a[j+1]){int t=a[j];a[j]=a[j+1];a[j+1]=t;}for(int i=0;i<n;i++)printf(\"%d%c\",a[i],i==n-1?'\\n':' ');return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3\n3 1 2\n",
+        "expectedOutput": "1 2 3\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n5\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-3",
+        "input": "4\n-1 3 0 -2\n",
+        "expectedOutput": "-2 -1 0 3\n"
+      },
+      {
+        "id": "case-4",
+        "input": "5\n5 4 3 2 1\n",
+        "expectedOutput": "1 2 3 4 5\n"
+      },
+      {
+        "id": "case-5",
+        "input": "4\n2 2 1 1\n",
+        "expectedOutput": "1 1 2 2\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n ≤ 10。",
+    "id": "orig-diagonal-sum",
+    "title": "方阵主对角线之和",
+    "chapter": "二维数组与综合练习",
+    "topics": [
+      "二维数组",
+      "嵌套循环",
+      "对角线"
+    ],
+    "difficulty": "进阶",
+    "statement": "读取 n×n 方阵，计算主对角线元素之和。",
+    "inputFormat": "第一行输入 n，接着输入 n 行矩阵。",
+    "outputFormat": "输出主对角线元素的和。",
+    "examples": [
+      {
+        "input": "2\n1 2\n3 4\n",
+        "output": "5"
+      },
+      {
+        "input": "1\n7\n",
+        "output": "7"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 二维数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过二维数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,sum=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)for(int j=0;j<n;j++){scanf(\"%d\",&x);if(i==j)sum+=x;}printf(\"%d\\n\",sum);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "2\n1 2\n3 4\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n7\n",
+        "expectedOutput": "7\n"
+      },
+      {
+        "id": "case-3",
+        "input": "3\n1 0 0\n0 2 0\n0 0 3\n",
+        "expectedOutput": "6\n"
+      },
+      {
+        "id": "case-4",
+        "input": "2\n-1 5\n8 -2\n",
+        "expectedOutput": "-3\n"
+      },
+      {
+        "id": "case-5",
+        "input": "4\n1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16\n",
+        "expectedOutput": "34\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "1 ≤ n,m ≤ 10。",
+    "id": "orig-row-maximums",
+    "title": "每行最大值",
+    "chapter": "二维数组与综合练习",
+    "topics": [
+      "二维数组",
+      "遍历",
+      "比较"
+    ],
+    "difficulty": "进阶",
+    "statement": "读取 n 行 m 列的矩阵，输出每一行的最大值。",
+    "inputFormat": "第一行输入 n 和 m，随后输入矩阵。",
+    "outputFormat": "输出 n 个最大值，每个占一行。",
+    "examples": [
+      {
+        "input": "2 3\n1 5 2\n9 0 4\n",
+        "output": "5\n9"
+      },
+      {
+        "input": "1 1\n-3\n",
+        "output": "-3"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 二维数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过二维数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,m,x,max=0;if(scanf(\"%d%d\",&n,&m)!=2)return 1;for(int i=0;i<n;i++){for(int j=0;j<m;j++){scanf(\"%d\",&x);if(j==0||x>max)max=x;}printf(\"%d\\n\",max);}return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "2 3\n1 5 2\n9 0 4\n",
+        "expectedOutput": "5\n9\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1 1\n-3\n",
+        "expectedOutput": "-3\n"
+      },
+      {
+        "id": "case-3",
+        "input": "3 2\n1 2\n8 4\n0 -1\n",
+        "expectedOutput": "2\n8\n0\n"
+      },
+      {
+        "id": "case-4",
+        "input": "2 2\n-1 -2\n-3 -4\n",
+        "expectedOutput": "-1\n-3\n"
+      },
+      {
+        "id": "case-5",
+        "input": "1 4\n3 3 3 3\n",
+        "expectedOutput": "3\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "元素绝对值不超过 1000。",
+    "id": "orig-transpose-matrix",
+    "title": "转置 2×3 矩阵",
+    "chapter": "二维数组与综合练习",
+    "topics": [
+      "二维数组",
+      "矩阵",
+      "下标"
+    ],
+    "difficulty": "基础",
+    "statement": "读取一个 2×3 矩阵并输出它的 3×2 转置矩阵。",
+    "inputFormat": "输入两行，每行三个整数。",
+    "outputFormat": "输出三行，每行两个整数，元素之间用一个空格分隔。",
+    "examples": [
+      {
+        "input": "1 2 3\n4 5 6\n",
+        "output": "1 4\n2 5\n3 6"
+      },
+      {
+        "input": "0 0 0\n0 0 0\n",
+        "output": "0 0\n0 0\n0 0"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 二维数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过二维数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a[2][3];for(int i=0;i<2;i++)for(int j=0;j<3;j++)scanf(\"%d\",&a[i][j]);for(int j=0;j<3;j++)printf(\"%d %d\\n\",a[0][j],a[1][j]);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "1 2 3\n4 5 6\n",
+        "expectedOutput": "1 4\n2 5\n3 6\n"
+      },
+      {
+        "id": "case-2",
+        "input": "0 0 0\n0 0 0\n",
+        "expectedOutput": "0 0\n0 0\n0 0\n"
+      },
+      {
+        "id": "case-3",
+        "input": "-1 2 -3\n4 -5 6\n",
+        "expectedOutput": "-1 4\n2 -5\n-3 6\n"
+      },
+      {
+        "id": "case-4",
+        "input": "7 8 9\n1 2 3\n",
+        "expectedOutput": "7 1\n8 2\n9 3\n"
+      },
+      {
+        "id": "case-5",
+        "input": "5 4 3\n2 1 0\n",
+        "expectedOutput": "5 2\n4 1\n3 0\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "文本长度不超过 100，只包含英文字符和空格。",
+    "id": "orig-vowel-count",
+    "title": "统计元音字母",
+    "chapter": "字符串",
+    "topics": [
+      "字符数组",
+      "循环",
+      "字符判断"
+    ],
+    "difficulty": "基础",
+    "statement": "统计一行英文文本中 a、e、i、o、u 五种元音字母的数量，不区分大小写。",
+    "inputFormat": "输入一行英文文本。",
+    "outputFormat": "输出元音字母总数。",
+    "examples": [
+      {
+        "input": "Hello\n",
+        "output": "2"
+      },
+      {
+        "input": "AEIOU\n",
+        "output": "5"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 字符数组 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过字符数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int count=0;for(int i=0;s[i]&&s[i]!='\\n';i++){char c=s[i];if(c>='A'&&c<='Z')c+='a'-'A';if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')count++;}printf(\"%d\\n\",count);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "Hello\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-2",
+        "input": "AEIOU\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-3",
+        "input": "C language\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "id": "case-4",
+        "input": "xyz\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-5",
+        "input": "a quick test\n",
+        "expectedOutput": "4\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "文本可以包含空格，但不包含换行本身。",
+    "id": "orig-string-reverse",
+    "title": "反转字符串",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "字符数组",
+      "下标"
+    ],
+    "difficulty": "基础",
+    "statement": "读取一行英文文本并将其中的字符倒序输出。",
+    "inputFormat": "输入一行长度不超过 100 的文本。",
+    "outputFormat": "输出反转后的文本。",
+    "examples": [
+      {
+        "input": "abc\n",
+        "output": "cba"
+      },
+      {
+        "input": "a b\n",
+        "output": "b a"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 字符串 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过字符串练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int n=0;while(s[n]&&s[n]!='\\n')n++;for(int i=n-1;i>=0;i--)putchar(s[i]);putchar('\\n');return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "abc\n",
+        "expectedOutput": "cba\n"
+      },
+      {
+        "id": "case-2",
+        "input": "a b\n",
+        "expectedOutput": "b a\n"
+      },
+      {
+        "id": "case-3",
+        "input": "C\n",
+        "expectedOutput": "C\n"
+      },
+      {
+        "id": "case-4",
+        "input": "hello world\n",
+        "expectedOutput": "dlrow olleh\n"
+      },
+      {
+        "id": "case-5",
+        "input": "12345\n",
+        "expectedOutput": "54321\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "长度为 1 到 100。",
+    "id": "orig-palindrome",
+    "title": "判断回文字符串",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "下标",
+      "比较"
+    ],
+    "difficulty": "基础",
+    "statement": "判断一个没有空格的英文字符串是否正读反读都相同。",
+    "inputFormat": "输入一个不含空格的字符串。",
+    "outputFormat": "回文输出 yes，否则输出 no。",
+    "examples": [
+      {
+        "input": "level\n",
+        "output": "yes"
+      },
+      {
+        "input": "hello\n",
+        "output": "no"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 字符串 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过字符串练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(scanf(\"%100s\",s)!=1)return 1;int n=0,ok=1;while(s[n])n++;for(int i=0;i<n/2;i++)if(s[i]!=s[n-1-i])ok=0;puts(ok?\"yes\":\"no\");return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "level\n",
+        "expectedOutput": "yes\n"
+      },
+      {
+        "id": "case-2",
+        "input": "hello\n",
+        "expectedOutput": "no\n"
+      },
+      {
+        "id": "case-3",
+        "input": "a\n",
+        "expectedOutput": "yes\n"
+      },
+      {
+        "id": "case-4",
+        "input": "abba\n",
+        "expectedOutput": "yes\n"
+      },
+      {
+        "id": "case-5",
+        "input": "abcba\n",
+        "expectedOutput": "yes\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "文本长度不超过 100。",
+    "id": "orig-word-count",
+    "title": "统计单词数量",
+    "chapter": "字符串",
+    "topics": [
+      "字符串",
+      "状态切换",
+      "循环"
+    ],
+    "difficulty": "进阶",
+    "statement": "统计一行文本中由空格分隔的单词数量。连续空格不产生空单词。",
+    "inputFormat": "输入一行英文文本，单词之间可能有多个空格。",
+    "outputFormat": "输出单词数量。",
+    "examples": [
+      {
+        "input": "hello world\n",
+        "output": "2"
+      },
+      {
+        "input": "  one  two \n",
+        "output": "2"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 字符串 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过字符串练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int count=0,in=0;for(int i=0;s[i]&&s[i]!='\\n';i++){if(s[i]!=' '){if(!in)count++;in=1;}else in=0;}printf(\"%d\\n\",count);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "hello world\n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-2",
+        "input": "  one  two \n",
+        "expectedOutput": "2\n"
+      },
+      {
+        "id": "case-3",
+        "input": "\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-4",
+        "input": "C language is fun\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "id": "case-5",
+        "input": "single\n",
+        "expectedOutput": "1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "文本长度不超过 100，只包含英文字母、数字和空格。",
+    "id": "orig-uppercase",
+    "title": "英文小写转大写",
+    "chapter": "字符串",
+    "topics": [
+      "字符",
+      "ASCII",
+      "字符串"
+    ],
+    "difficulty": "基础",
+    "statement": "将一行英文文本中的小写字母转换为大写，其他字符保持不变。",
+    "inputFormat": "输入一行英文文本。",
+    "outputFormat": "输出转换后的文本。",
+    "examples": [
+      {
+        "input": "hello\n",
+        "output": "HELLO"
+      },
+      {
+        "input": "C Path 123\n",
+        "output": "C PATH 123"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 字符 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过字符练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;for(int i=0;s[i];i++)if(s[i]>='a'&&s[i]<='z')s[i]-='a'-'A';fputs(s,stdout);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "hello\n",
+        "expectedOutput": "HELLO\n"
+      },
+      {
+        "id": "case-2",
+        "input": "C Path 123\n",
+        "expectedOutput": "C PATH 123\n"
+      },
+      {
+        "id": "case-3",
+        "input": "Already Upper\n",
+        "expectedOutput": "ALREADY UPPER\n"
+      },
+      {
+        "id": "case-4",
+        "input": "abc xyz\n",
+        "expectedOutput": "ABC XYZ\n"
+      },
+      {
+        "id": "case-5",
+        "input": "2024\n",
+        "expectedOutput": "2024\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "输入为 int 范围内除最小值外的整数。",
+    "id": "orig-function-absolute",
+    "title": "用函数求绝对值",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "函数",
+      "返回值",
+      "条件判断"
+    ],
+    "difficulty": "入门",
+    "statement": "定义并调用一个函数，返回整数的绝对值。",
+    "inputFormat": "输入一个整数。",
+    "outputFormat": "输出它的绝对值。",
+    "examples": [
+      {
+        "input": "-8\n",
+        "output": "8"
+      },
+      {
+        "input": "0\n",
+        "output": "0"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 函数 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint absolute(int n){return n<0?-n:n;}\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;printf(\"%d\\n\",absolute(n));return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "-8\n",
+        "expectedOutput": "8\n"
+      },
+      {
+        "id": "case-2",
+        "input": "0\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-3",
+        "input": "15\n",
+        "expectedOutput": "15\n"
+      },
+      {
+        "id": "case-4",
+        "input": "-1\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-5",
+        "input": "1000\n",
+        "expectedOutput": "1000\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "0 ≤ n ≤ 12。",
+    "id": "orig-recursive-factorial",
+    "title": "递归计算阶乘",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "递归",
+      "函数",
+      "返回值"
+    ],
+    "difficulty": "进阶",
+    "statement": "使用递归函数计算 n!。",
+    "inputFormat": "输入一个非负整数 n。",
+    "outputFormat": "输出 n 的阶乘。",
+    "examples": [
+      {
+        "input": "0\n",
+        "output": "1"
+      },
+      {
+        "input": "1\n",
+        "output": "1"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 递归 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过递归练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nlong long factorial(int n){if(n<=1)return 1;return n*factorial(n-1);}\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;printf(\"%lld\\n\",factorial(n));return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "0\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "5\n",
+        "expectedOutput": "120\n"
+      },
+      {
+        "id": "case-4",
+        "input": "8\n",
+        "expectedOutput": "40320\n"
+      },
+      {
+        "id": "case-5",
+        "input": "12\n",
+        "expectedOutput": "479001600\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "整数绝对值不超过 100000。",
+    "id": "orig-pointer-swap",
+    "title": "使用指针交换两个数",
+    "chapter": "循环控制与函数基础",
+    "topics": [
+      "指针",
+      "函数参数",
+      "交换"
+    ],
+    "difficulty": "进阶",
+    "statement": "编写 swap 函数，通过指针交换两个整数。",
+    "inputFormat": "输入两个整数。",
+    "outputFormat": "输出交换后的 a 和 b，用空格分隔。",
+    "examples": [
+      {
+        "input": "1 2\n",
+        "output": "2 1"
+      },
+      {
+        "input": "-3 8\n",
+        "output": "8 -3"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 指针 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过指针练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nvoid swap(int *a,int *b){int t=*a;*a=*b;*b=t;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;swap(&a,&b);printf(\"%d %d\\n\",a,b);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "1 2\n",
+        "expectedOutput": "2 1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-3 8\n",
+        "expectedOutput": "8 -3\n"
+      },
+      {
+        "id": "case-3",
+        "input": "0 0\n",
+        "expectedOutput": "0 0\n"
+      },
+      {
+        "id": "case-4",
+        "input": "9 -1\n",
+        "expectedOutput": "-1 9\n"
+      },
+      {
+        "id": "case-5",
+        "input": "5 5\n",
+        "expectedOutput": "5 5\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v2",
+    "author": "C·Path maintainers",
+    "constraints": "成绩在 0 到 100 之间。",
+    "id": "orig-student-average",
+    "title": "结构体保存成绩",
+    "chapter": "结构体与自定义类型",
+    "topics": [
+      "结构体",
+      "数组",
+      "平均值"
+    ],
+    "difficulty": "进阶",
+    "statement": "用结构体保存一名学生的三门成绩，输出平均分。",
+    "inputFormat": "输入姓名（不含空格）和三门整数成绩。",
+    "outputFormat": "输出平均分，保留一位小数。",
+    "examples": [
+      {
+        "input": "Li 90 80 70\n",
+        "output": "80.0"
+      },
+      {
+        "input": "A 100 100 100\n",
+        "output": "100.0"
+      }
+    ],
+    "hints": [
+      "先明确输入中的数据和需要输出的结果，再选择 结构体 相关语法。",
+      "把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。",
+      "完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。"
+    ],
+    "explanation": "这道题通过结构体练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\ntypedef struct{char name[21];int score[3];}Student;\nint main(void){Student s;if(scanf(\"%20s%d%d%d\",s.name,&s.score[0],&s.score[1],&s.score[2])!=4)return 1;printf(\"%.1f\\n\",(s.score[0]+s.score[1]+s.score[2])/3.0);return 0;}",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "Li 90 80 70\n",
+        "expectedOutput": "80.0\n"
+      },
+      {
+        "id": "case-2",
+        "input": "A 100 100 100\n",
+        "expectedOutput": "100.0\n"
+      },
+      {
+        "id": "case-3",
+        "input": "Bob 0 60 30\n",
+        "expectedOutput": "30.0\n"
+      },
+      {
+        "id": "case-4",
+        "input": "M 75 76 77\n",
+        "expectedOutput": "76.0\n"
+      },
+      {
+        "id": "case-5",
+        "input": "Z 88 92 90\n",
+        "expectedOutput": "90.0\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals-phase6.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  }
+]

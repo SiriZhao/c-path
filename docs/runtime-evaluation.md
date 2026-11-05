@@ -4,7 +4,7 @@
 
 ## 结论
 
-当前版本已接入经过实际 Chromium CI 验证的浏览器端 C 运行器：`@browserrun/sandrun@0.4.0` 的 xcc 引擎。代码在沙箱 iframe 内的 Worker 中编译和执行，练习页会显示真实 stdout、stderr、退出码、耗时、编译错误、超时和输出上限状态。它仍然是本地测试，不提供服务器隐藏测试或防作弊 Accepted。
+当前版本已接入经过实际 Chromium CI 验证的浏览器端 C 运行器，并在 Phase 6 保持不变：`@browserrun/sandrun@0.4.0` 的 xcc 引擎。代码在沙箱 iframe 内的 Worker 中编译和执行，练习页会显示真实 stdout、stderr、退出码、耗时、编译错误、超时和输出上限状态。它仍然是本地测试，不提供服务器隐藏测试或防作弊 Accepted。
 
 ## 调研结果
 
