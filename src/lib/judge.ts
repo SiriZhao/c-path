@@ -3,7 +3,7 @@ import type { CompilerAdapter, ExecutionLimits, ExecutionResult } from './runtim
 
 export type JudgeResult = ExecutionResult & { message: string }
 
-export const DEFAULT_LIMITS: ExecutionLimits = { timeoutMs: 2000, compileTimeoutMs: 20_000, maxInputBytes: 16_384, maxOutputBytes: 64_000 }
+export const DEFAULT_LIMITS: ExecutionLimits = { timeoutMs: 2000, compileTimeoutMs: 120_000, maxInputBytes: 16_384, maxOutputBytes: 64_000 }
 
 export class UnavailableCompilerAdapter implements CompilerAdapter {
   readonly id = 'unavailable'

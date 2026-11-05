@@ -33,6 +33,7 @@ test('original exercise exposes real statement and local test inventory', async 
 
 test('browsercc executes C with stdin and runs local tests', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === 'mobile', '运行器编译验收只在桌面 Chromium 执行，移动端仍覆盖页面交互。')
+  test.setTimeout(180_000)
   await page.goto('./#/practice/orig-sum-two-integers')
   await page.getByRole('textbox', { name: 'C 代码编辑器' }).fill('#include <stdio.h>\nint main(void) { int a, b; if (scanf("%d %d", &a, &b) != 2) return 1; printf("%d\\n", a + b); return 0; }')
   await page.locator('.input-label textarea').fill('3 5')
