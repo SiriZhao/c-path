@@ -320,7 +320,7 @@
     ],
     "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void) { char command; if (scanf(\"%c\", &command) != 1) return 1; switch (command) { case 'a': puts(\"add\"); break; case 's': puts(\"subtract\"); break; default: puts(\"unknown\"); } return 0; }\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int command = getchar(); if (command == EOF) return 1; switch (command) { case 'a': puts(\"add\"); break; case 's': puts(\"subtract\"); break; default: puts(\"unknown\"); } return 0; }\n",
     "testCases": [
       {
         "id": "case-1",

@@ -67,12 +67,9 @@ test('sandrun executes every original reference through local tests', async ({ p
   test.skip(testInfo.project.name === 'mobile', '原创题批量运行只在桌面 Chromium 执行，移动端仍覆盖页面交互。')
   test.setTimeout(240_000)
   for (const original of originals) {
-    console.log(`[original] ${original.id}`)
     await page.goto(`./#/practice/${original.id}`)
     await page.getByRole('textbox', { name: 'C 代码编辑器' }).fill(original.referenceSolution)
     await page.getByRole('button', { name: '提交本地测试' }).click()
-    await page.waitForTimeout(250)
-    console.log(`[original-result] ${original.id} ${await page.locator('main').innerText()}`)
     await expect(page.getByText(`测试结果 ${original.testCases.length}/${original.testCases.length}`)).toBeVisible({ timeout: 120_000 })
   }
   await page.screenshot({ path: testInfo.outputPath('all-original-references.png'), fullPage: true })
