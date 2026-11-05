@@ -10,7 +10,7 @@
 - 第二次 Actions 运行 `41838809277` 的 build 和 deploy 均成功。
 - Pages deployment `7547327461` 状态为 `success`，环境 URL 为 `https://sirizhao.github.io/c-path/`。
 - 最新提交 `86e98fb` 的 Pages 工作流 `41845936251` 和 Browser QA 工作流 `41845936087` 均成功。
-- `main` 的 Pages 工作流此前已成功部署；Phase 5 分支提交 `8f67f3c` 的 Pages 工作流 `41983805304` 和 Browser QA 工作流 `41983805318` 均成功。
+- 合并提交 `af5b85d8b643ee1d3f5730896989680fc51129ce` 的 Pages 工作流 `41999871779`、Browser QA 工作流 `41999871766` 和原创题验证工作流 `41999871745` 均成功。
 - 运行器浏览器验收真实覆盖 C scanf 求和、样例和本地测试，在线产物包含 `public/sandrun/` 静态运行时入口。
 - 本机 PowerShell/curl 的 HTTPS 请求受 Windows Schannel 凭据错误影响，未将本机请求冒充线上浏览器验证；GitHub deployment 状态已由 API 复核。
 
