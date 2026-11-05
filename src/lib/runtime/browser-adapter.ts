@@ -45,7 +45,7 @@ function getRunner(limits: ExecutionLimits): Promise<SandrunRunner> {
 
 function classify(stderr: string, exitCode: number, error?: string): ExecutionResult['status'] {
   if (error) return 'UNAVAILABLE'
-  if (stderr.includes('error:') && exitCode !== 0) return 'COMPILATION_ERROR'
+  if (exitCode !== 0 && /\S/.test(stderr) && !/runtime|trap|segmentation|null dereference|out of bounds|abort/i.test(stderr)) return 'COMPILATION_ERROR'
   return exitCode === 0 ? 'OK' : 'RUNTIME_ERROR'
 }
 
