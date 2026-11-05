@@ -41,7 +41,7 @@ test('formal practice and source archive stay separated', async ({ page }) => {
   await expect(page.locator('.page-intro .eyebrow')).toContainText('48')
   await page.getByRole('link', { name: '查看来源档案' }).click()
   await expect(page.locator('.page-intro .eyebrow')).toContainText('38')
-  await expect(page.getByText('来源档案')).toBeVisible()
+  await expect(page.getByRole('link', { name: '返回正式练习' })).toBeVisible()
 })
 
 test('help page explains the first practice flow', async ({ page }) => {
