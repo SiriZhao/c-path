@@ -1,6 +1,6 @@
 # 部署状态
 
-截至 2026-11-05，项目已发布到 GitHub Pages，Phase 5 功能分支的构建和浏览器验收均已通过。
+截至 2026-11-05，项目已发布到 GitHub Pages，Phase 6 产品体验和正式题库升级已合并。
 
 - `vite.config.ts` 已设置项目路径 `/c-path/`。
 - `.github/workflows/pages.yml` 已提供类型检查、测试、构建和 Pages 部署工作流。
@@ -10,7 +10,7 @@
 - 第二次 Actions 运行 `41838809277` 的 build 和 deploy 均成功。
 - Pages deployment `7547327461` 状态为 `success`，环境 URL 为 `https://sirizhao.github.io/c-path/`。
 - 最新提交 `86e98fb` 的 Pages 工作流 `41845936251` 和 Browser QA 工作流 `41845936087` 均成功。
-- 当前 main 提交 `e5fd04aacdcdc1aaec3fedd4011c4d1a2cc8560d` 的 Pages 工作流 `42017081582`、Browser QA 工作流 `42017081553` 和原创题验证工作流 `42017081495` 均成功。
+- 当前 main 提交 `730f4eb8740985611b803de6d4facf597aba4427` 的 Pages 工作流 `42041164063`、Browser QA 工作流 `42041164440` 和原创题验证工作流 `42041164451` 均成功。
 - 运行器浏览器验收真实覆盖 C scanf 求和、样例和本地测试，在线产物包含 `public/sandrun/` 静态运行时入口。
 - 本机 PowerShell/curl 的 HTTPS 请求受 Windows Schannel 凭据错误影响，未将本机请求冒充线上浏览器验证；GitHub deployment 状态已由 API 复核。
 
@@ -19,3 +19,5 @@
 1. 将 Phase 5 分支通过 PR 合并到 `main`，等待新的 Pages 部署完成。
 2. 合并后检查 `https://sirizhao.github.io/c-path/`、刷新深链接和首次运行器加载。
 3. 若仓库发生并发变化，先比较远程历史，禁止强推覆盖。
+
+- Phase 6 正式题库：48 道 C·Path 原创题、240 组本地测试；C_PAT 38 条来源档案单独保留。
