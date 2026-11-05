@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { exportProgress, importProgress, loadProgress, saveProgress } from './storage'
+import { exportProgress, importProgress, loadProgress, recordLearningEvent, saveProgress } from './storage'
 import { EMPTY_PROGRESS } from '../types'
 
 const memory = new Map<string, string>()
@@ -29,5 +29,18 @@ describe('learning progress storage', () => {
     expect(value.completed).toEqual(['pat-2_0'])
     expect(value.code).toEqual({ ok: 'int main(){}' })
     expect(value.attempts).toEqual({ 'pat-2_0': 2 })
+  })
+  it('migrates v1 records without losing code or completion', () => {
+    const migrated = importProgress(JSON.stringify({ version: 1, completed: ['pat-2_0'], code: { 'pat-2_0': 'draft' }, attempts: { 'pat-2_0': 3 }, theme: 'dark' }))
+    expect(migrated.version).toBe(2)
+    expect(migrated.code['pat-2_0']).toBe('draft')
+    expect(migrated.states['pat-2_0']).toBe('self-completed')
+  })
+  it('counts run events rather than draft keystrokes', () => {
+    let progress = { ...EMPTY_PROGRESS }
+    progress = recordLearningEvent(progress, 'orig-sum-two-integers', 'draft-saved')
+    progress = recordLearningEvent(progress, 'orig-sum-two-integers', 'run-attempted')
+    expect(progress.attempts['orig-sum-two-integers']).toBe(1)
+    expect(progress.events['orig-sum-two-integers']).toHaveLength(2)
   })
 })

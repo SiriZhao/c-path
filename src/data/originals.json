@@ -1,0 +1,718 @@
+[
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-hello-world",
+    "title": "Hello, C·Path!",
+    "chapter": "计算机、程序与 C 语言",
+    "topics": [
+      "标准输出",
+      "main 函数",
+      "printf"
+    ],
+    "difficulty": "入门",
+    "statement": "输出一行 Hello, C·Path!，末尾换行。",
+    "inputFormat": "无输入。",
+    "outputFormat": "输出一行固定文本。",
+    "examples": [
+      {
+        "input": "",
+        "output": "Hello, C·Path!"
+      }
+    ],
+    "hints": [
+      "先找到程序的入口函数。",
+      "使用 printf 输出固定字符串并显式换行。",
+      "关键实现是 printf(\"Hello, C·Path!\\n\");"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { printf(\"Hello, C·Path!\\n\"); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "",
+        "expectedOutput": "Hello, C·Path!\n"
+      },
+      {
+        "id": "case-2",
+        "input": "",
+        "expectedOutput": "Hello, C·Path!\n"
+      },
+      {
+        "id": "case-3",
+        "input": "",
+        "expectedOutput": "Hello, C·Path!\n"
+      },
+      {
+        "id": "case-4",
+        "input": "",
+        "expectedOutput": "Hello, C·Path!\n"
+      },
+      {
+        "id": "case-5",
+        "input": "",
+        "expectedOutput": "Hello, C·Path!\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-sum-two-integers",
+    "title": "两个整数求和",
+    "chapter": "变量、运算符和表达式",
+    "topics": [
+      "变量",
+      "scanf",
+      "整数运算"
+    ],
+    "difficulty": "入门",
+    "statement": "读取两个整数，输出它们的和。",
+    "inputFormat": "一行包含两个整数 a 和 b。",
+    "outputFormat": "输出 a+b，单独占一行。",
+    "examples": [
+      {
+        "input": "3 5",
+        "output": "8"
+      },
+      {
+        "input": "-2 7",
+        "output": "5"
+      }
+    ],
+    "hints": [
+      "先声明两个 int 变量。",
+      "scanf 的参数需要传变量地址。",
+      "读取成功后输出 a + b。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int a,b; if (scanf(\"%d %d\", &a, &b) != 2) return 1; printf(\"%d\\n\", a+b); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3 5\n",
+        "expectedOutput": "8\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-2 7\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-3",
+        "input": "0 0\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-4",
+        "input": "100 -30\n",
+        "expectedOutput": "70\n"
+      },
+      {
+        "id": "case-5",
+        "input": "-8 -9\n",
+        "expectedOutput": "-17\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-even-or-odd",
+    "title": "判断奇偶数",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "if",
+      "取模",
+      "条件判断"
+    ],
+    "difficulty": "入门",
+    "statement": "读取一个整数，判断它是奇数还是偶数。",
+    "inputFormat": "一行包含整数 n。",
+    "outputFormat": "偶数输出 even，奇数输出 odd。",
+    "examples": [
+      {
+        "input": "8",
+        "output": "even"
+      },
+      {
+        "input": "-3",
+        "output": "odd"
+      }
+    ],
+    "hints": [
+      "奇偶性可以通过除法余数判断。",
+      "负数取模仍可判断是否为 0。",
+      "n % 2 == 0 时输出 even。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int n; if (scanf(\"%d\", &n) != 1) return 1; puts(n % 2 == 0 ? \"even\" : \"odd\"); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "8\n",
+        "expectedOutput": "even\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-3\n",
+        "expectedOutput": "odd\n"
+      },
+      {
+        "id": "case-3",
+        "input": "0\n",
+        "expectedOutput": "even\n"
+      },
+      {
+        "id": "case-4",
+        "input": "1\n",
+        "expectedOutput": "odd\n"
+      },
+      {
+        "id": "case-5",
+        "input": "100\n",
+        "expectedOutput": "even\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-max-of-three",
+    "title": "三个数的最大值",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "if",
+      "比较",
+      "变量更新"
+    ],
+    "difficulty": "入门",
+    "statement": "读取三个整数，输出其中最大的一个。",
+    "inputFormat": "一行包含三个整数。",
+    "outputFormat": "输出最大值，单独占一行。",
+    "examples": [
+      {
+        "input": "3 9 5",
+        "output": "9"
+      },
+      {
+        "input": "-1 -8 -3",
+        "output": "-1"
+      }
+    ],
+    "hints": [
+      "先把第一个数作为当前最大值。",
+      "依次比较第二、第三个数。",
+      "相等时保留当前值即可。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int a,b,c,max; if (scanf(\"%d %d %d\", &a,&b,&c) != 3) return 1; max=a; if (b>max) max=b; if (c>max) max=c; printf(\"%d\\n\", max); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3 9 5\n",
+        "expectedOutput": "9\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-1 -8 -3\n",
+        "expectedOutput": "-1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "4 4 2\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "id": "case-4",
+        "input": "0 0 0\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-5",
+        "input": "100 -2 7\n",
+        "expectedOutput": "100\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-switch-menu",
+    "title": "简单的 switch 分支",
+    "chapter": "条件判断与分支结构",
+    "topics": [
+      "switch",
+      "case",
+      "字符"
+    ],
+    "difficulty": "基础",
+    "statement": "读取一个字符命令：a 输出 add，s 输出 subtract，其他命令输出 unknown。",
+    "inputFormat": "输入一个字符。",
+    "outputFormat": "输出对应单词。",
+    "examples": [
+      {
+        "input": "a",
+        "output": "add"
+      },
+      {
+        "input": "x",
+        "output": "unknown"
+      }
+    ],
+    "hints": [
+      "switch 适合处理离散的命令值。",
+      "每个 case 结束后注意 break。",
+      "default 负责未覆盖的输入。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { char command; if (scanf(\"%c\", &command) != 1) return 1; switch (command) { case 'a': puts(\"add\"); break; case 's': puts(\"subtract\"); break; default: puts(\"unknown\"); } return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "a\n",
+        "expectedOutput": "add\n"
+      },
+      {
+        "id": "case-2",
+        "input": "s\n",
+        "expectedOutput": "subtract\n"
+      },
+      {
+        "id": "case-3",
+        "input": "x\n",
+        "expectedOutput": "unknown\n"
+      },
+      {
+        "id": "case-4",
+        "input": "A\n",
+        "expectedOutput": "unknown\n"
+      },
+      {
+        "id": "case-5",
+        "input": "\n",
+        "expectedOutput": "unknown\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-digit-count",
+    "title": "整数位数统计",
+    "chapter": "循环结构",
+    "topics": [
+      "while",
+      "整数除法",
+      "边界"
+    ],
+    "difficulty": "基础",
+    "statement": "读取一个整数，输出它的十进制位数。0 的位数定义为 1。",
+    "inputFormat": "一行包含整数 n。",
+    "outputFormat": "输出位数。",
+    "examples": [
+      {
+        "input": "0",
+        "output": "1"
+      },
+      {
+        "input": "-1200",
+        "output": "4"
+      }
+    ],
+    "hints": [
+      "负号不属于十进制位数。",
+      "0 需要特殊处理，do-while 很适合。",
+      "每次整数除以 10，位数加一。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int n; if (scanf(\"%d\", &n) != 1) return 1; int count=0; if (n<0) n=-n; do { count++; n/=10; } while (n!=0); printf(\"%d\\n\", count); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "0\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "-1200\n",
+        "expectedOutput": "4\n"
+      },
+      {
+        "id": "case-3",
+        "input": "7\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "100000\n",
+        "expectedOutput": "6\n"
+      },
+      {
+        "id": "case-5",
+        "input": "-9\n",
+        "expectedOutput": "1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-factorial",
+    "title": "计算阶乘",
+    "chapter": "循环结构",
+    "topics": [
+      "for",
+      "累乘",
+      "函数边界"
+    ],
+    "difficulty": "基础",
+    "statement": "读取 n，输出 n!。本题约束 0≤n≤12。",
+    "inputFormat": "一行包含 n。",
+    "outputFormat": "输出 n!。",
+    "examples": [
+      {
+        "input": "0",
+        "output": "1"
+      },
+      {
+        "input": "5",
+        "output": "120"
+      }
+    ],
+    "hints": [
+      "阶乘是从 1 到 n 的连续乘积。",
+      "0! 的结果按定义是 1。",
+      "使用 long long 覆盖题目范围。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int n; if (scanf(\"%d\", &n) != 1 || n<0 || n>12) return 1; long long result=1; for (int i=2;i<=n;i++) result*=i; printf(\"%lld\\n\", result); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "0\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n",
+        "expectedOutput": "1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "5\n",
+        "expectedOutput": "120\n"
+      },
+      {
+        "id": "case-4",
+        "input": "10\n",
+        "expectedOutput": "3628800\n"
+      },
+      {
+        "id": "case-5",
+        "input": "12\n",
+        "expectedOutput": "479001600\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-average",
+    "title": "一组数的平均值",
+    "chapter": "数组",
+    "topics": [
+      "数组",
+      "循环",
+      "浮点输出"
+    ],
+    "difficulty": "基础",
+    "statement": "读取 n 个整数，输出它们的平均值，保留两位小数。约束 1≤n≤100。",
+    "inputFormat": "第一行 n，第二行 n 个整数。",
+    "outputFormat": "输出平均值，保留两位小数。",
+    "examples": [
+      {
+        "input": "3\n1 2 4",
+        "output": "2.33"
+      },
+      {
+        "input": "2\n-1 1",
+        "output": "0.00"
+      }
+    ],
+    "hints": [
+      "先累加整数，最后再转换为 double。",
+      "平均值可能不是整数。",
+      "printf 的 %.2f 会保留两位小数。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int n; if (scanf(\"%d\", &n) != 1 || n<1 || n>100) return 1; long long sum=0; for (int i=0,x;i<n;i++) { if (scanf(\"%d\", &x)!=1) return 1; sum+=x; } printf(\"%.2f\\n\", (double)sum/n); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "3\n1 2 4\n",
+        "expectedOutput": "2.33\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n5\n",
+        "expectedOutput": "5.00\n"
+      },
+      {
+        "id": "case-3",
+        "input": "2\n-1 1\n",
+        "expectedOutput": "0.00\n"
+      },
+      {
+        "id": "case-4",
+        "input": "4\n0 0 1 2\n",
+        "expectedOutput": "0.75\n"
+      },
+      {
+        "id": "case-5",
+        "input": "5\n10 20 30 40 50\n",
+        "expectedOutput": "30.00\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-array-max-position",
+    "title": "数组最大值与位置",
+    "chapter": "数组",
+    "topics": [
+      "数组",
+      "遍历",
+      "下标"
+    ],
+    "difficulty": "基础",
+    "statement": "读取 n 个整数，输出最大值及其第一次出现的位置。位置从 1 开始。",
+    "inputFormat": "第一行 n，第二行 n 个整数，1≤n≤100。",
+    "outputFormat": "输出：最大值和第一次出现的位置。",
+    "examples": [
+      {
+        "input": "4\n2 9 3 9",
+        "output": "9 2"
+      },
+      {
+        "input": "1\n-5",
+        "output": "-5 1"
+      }
+    ],
+    "hints": [
+      "位置和数组下标相差 1。",
+      "第一次出现要求只在严格更大时更新。",
+      "第一个数可以作为初始最大值。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { int n; if (scanf(\"%d\", &n)!=1 || n<1 || n>100) return 1; int x,max=0,pos=1; for (int i=1;i<=n;i++) { if (scanf(\"%d\", &x)!=1) return 1; if (i==1 || x>max) { max=x; pos=i; } } printf(\"%d %d\\n\", max,pos); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "4\n2 9 3 9\n",
+        "expectedOutput": "9 2\n"
+      },
+      {
+        "id": "case-2",
+        "input": "1\n-5\n",
+        "expectedOutput": "-5 1\n"
+      },
+      {
+        "id": "case-3",
+        "input": "3\n0 0 -1\n",
+        "expectedOutput": "0 1\n"
+      },
+      {
+        "id": "case-4",
+        "input": "5\n-2 -1 -3 -1 -4\n",
+        "expectedOutput": "-1 2\n"
+      },
+      {
+        "id": "case-5",
+        "input": "2\n100 99\n",
+        "expectedOutput": "100 1\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  },
+  {
+    "source": "C·Path Originals / 原创基础练习",
+    "sourceKind": "original",
+    "reviewStatus": "reviewed",
+    "contentStatus": "ready-for-local-judge",
+    "testVersion": "originals-v1",
+    "author": "C·Path maintainers",
+    "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
+    "id": "orig-string-length",
+    "title": "字符串长度统计",
+    "chapter": "字符串",
+    "topics": [
+      "字符数组",
+      "while",
+      "字符串结束"
+    ],
+    "difficulty": "基础",
+    "statement": "读取一行不超过 100 个字符的文本，输出不含换行符的长度。",
+    "inputFormat": "输入一行文本，可能包含空格。",
+    "outputFormat": "输出字符数量。",
+    "examples": [
+      {
+        "input": "hello",
+        "output": "5"
+      },
+      {
+        "input": "C Path",
+        "output": "6"
+      }
+    ],
+    "hints": [
+      "fgets 可以读取空格。",
+      "换行符不是题目要求统计的内容。",
+      "遇到 \\0 或 \\n 时停止计数。"
+    ],
+    "explanation": "先拆分输入、处理和输出，再用最小样例检查变量变化。",
+    "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
+    "referenceSolution": "#include <stdio.h>\nint main(void) { char text[101]; if (!fgets(text,sizeof(text),stdin)) return 1; int length=0; while (text[length] && text[length]!='\\n') length++; printf(\"%d\\n\", length); return 0; }\n",
+    "testCases": [
+      {
+        "id": "case-1",
+        "input": "hello\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-2",
+        "input": "\n",
+        "expectedOutput": "0\n"
+      },
+      {
+        "id": "case-3",
+        "input": "C Path\n",
+        "expectedOutput": "6\n"
+      },
+      {
+        "id": "case-4",
+        "input": "12345\n",
+        "expectedOutput": "5\n"
+      },
+      {
+        "id": "case-5",
+        "input": "a b c\n",
+        "expectedOutput": "5\n"
+      }
+    ],
+    "provenance": {
+      "path": "src/data/originals.json",
+      "sha256": "generated-from-reviewed-original",
+      "readmeScore": "",
+      "contentStatus": "C·Path authored content"
+    }
+  }
+]

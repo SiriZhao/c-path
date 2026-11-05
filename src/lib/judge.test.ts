@@ -6,5 +6,6 @@ describe('judge boundary', () => {
     const result = await runCCode('int main(void) { return 0; }', '')
     expect(result.status).toBe('UNAVAILABLE')
     expect(result.message).toContain('未配置')
+    expect(result.exitCode).toBeNull()
   })
 })

@@ -4,8 +4,9 @@ import { validateQuestions } from './schema'
 
 describe('question bank schema', () => {
   it('loads all imported questions with unique stable ids', () => {
-    expect(questions).toHaveLength(38)
-    expect(new Set(questions.map(question => question.id)).size).toBe(38)
+    expect(questions).toHaveLength(48)
+    expect(questions.filter(question => question.sourceKind === 'original')).toHaveLength(10)
+    expect(new Set(questions.map(question => question.id)).size).toBe(48)
     expect(chapters.length).toBeGreaterThan(0)
   })
 

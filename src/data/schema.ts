@@ -18,12 +18,15 @@ export function validateQuestions(value: unknown): Question[] {
     requireString(item.id, 'id', index)
     requireString(item.title, 'title', index)
     requireString(item.chapter, 'chapter', index)
-    if (!/^pat-[0-9]+_[0-9]+$/.test(item.id)) throw new Error(`题库第 ${index + 1} 项的 id 格式无效`)
+    if (!/^(pat-[0-9]+_[0-9]+|orig-[a-z0-9-]+)$/.test(item.id)) throw new Error(`题库第 ${index + 1} 项的 id 格式无效`)
     if (ids.has(item.id)) throw new Error(`题库存在重复 id：${item.id}`)
     ids.add(item.id)
     if (!Array.isArray(item.topics) || item.topics.some(topic => typeof topic !== 'string')) throw new Error(`题库 ${item.id} 的 topics 无效`)
     if (!isRecord(item.provenance) || typeof item.provenance.path !== 'string' || typeof item.provenance.sha256 !== 'string') throw new Error(`题库 ${item.id} 缺少可追溯来源`)
     if (!['source-imported-needs-statement-and-tests', 'reviewed'].includes(item.reviewStatus as string)) throw new Error(`题库 ${item.id} 的 reviewStatus 无效`)
+    if (!['pat-import', 'original'].includes(item.sourceKind as string)) throw new Error(`题库 ${item.id} 的 sourceKind 无效`)
+    if (!['imported', 'statement-verified', 'tests-verified', 'ready-for-local-judge'].includes(item.contentStatus as string)) throw new Error(`题库 ${item.id} 的 contentStatus 无效`)
+    if (!Array.isArray(item.testCases)) throw new Error(`题库 ${item.id} 的 testCases 无效`)
   })
   return value as Question[]
 }

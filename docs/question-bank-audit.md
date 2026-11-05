@@ -18,6 +18,8 @@ README 提供 38 个编号、中文标题和分值；扫描到 38 个同名 C �
 
 因此本次导入仅将 README 标题、源文件相对路径、SHA-256 和源代码保存到结构化数据中。`statement`、`examples`、`testCases` 与 `difficulty` 均明确为空或待审核，不能把个人源代码当作已经验证的官方答案。
 
+应用题库还会合并 `src/data/originals.json` 中的 10 道 C·Path 原创基础练习。它们不是 C_PAT 内容，也不改变本地导入题的审核状态；当前应用共展示 48 道题，其中原创题 10 道、C_PAT 导入题 38 道。原创题的 50 组测试集合由本项目编写，独立编译验证状态见 `docs/originals-validation.md`。
+
 ## 重复与完整性
 
 - 按文件 SHA-256 检查的重复源文件组：0

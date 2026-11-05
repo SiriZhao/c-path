@@ -26,7 +26,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-10_1",
@@ -55,7 +59,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-10_2",
@@ -84,7 +92,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-10_3",
@@ -113,7 +125,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-10_4",
@@ -142,7 +158,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-11_0",
@@ -171,7 +191,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-11_1",
@@ -200,7 +224,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-2_0",
@@ -229,7 +257,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-2_1",
@@ -258,7 +290,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-2_2",
@@ -287,7 +323,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-2_3",
@@ -316,7 +356,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-2_4",
@@ -345,7 +389,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-3_0",
@@ -374,7 +422,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-3_1",
@@ -403,7 +455,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-3_2",
@@ -432,7 +488,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-3_3",
@@ -461,7 +521,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-3_4",
@@ -490,7 +554,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-4_0",
@@ -519,7 +587,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-4_1",
@@ -548,7 +620,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-4_2",
@@ -577,7 +653,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-4_3",
@@ -606,7 +686,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-4_4",
@@ -635,7 +719,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-5_0",
@@ -664,7 +752,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-5_1",
@@ -693,7 +785,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-5_2",
@@ -722,7 +818,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-5_3",
@@ -751,7 +851,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-6_0",
@@ -781,7 +885,11 @@
       "readmeScore": "5",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-6_1",
@@ -811,7 +919,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-6_2",
@@ -841,7 +953,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-6_3",
@@ -871,7 +987,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-7_0",
@@ -900,7 +1020,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-7_1",
@@ -929,7 +1053,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-7_2",
@@ -958,7 +1086,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-7_3",
@@ -987,7 +1119,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-8_0",
@@ -1016,7 +1152,11 @@
       "readmeScore": "10",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-8_1",
@@ -1045,7 +1185,11 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-8_2",
@@ -1074,7 +1218,11 @@
       "readmeScore": "15",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   },
   {
     "id": "pat-8_3",
@@ -1103,6 +1251,10 @@
       "readmeScore": "20",
       "contentStatus": "only source code and README title are available"
     },
-    "reviewStatus": "source-imported-needs-statement-and-tests"
+    "reviewStatus": "source-imported-needs-statement-and-tests",
+    "sourceKind": "pat-import",
+    "contentStatus": "imported",
+    "testVersion": null,
+    "author": null
   }
 ]
