@@ -9,7 +9,7 @@ BASE = {
     "source": "C·Path Originals / 原创基础练习",
     "sourceKind": "original",
     "reviewStatus": "reviewed",
-    "contentStatus": "ready-for-local-judge",
+    "contentStatus": "tests-verified",
     "testVersion": "originals-v1",
     "author": "C·Path maintainers",
     "constraints": "输入满足题目给出的范围；输出按示例格式逐行给出。",
