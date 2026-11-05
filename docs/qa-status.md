@@ -13,5 +13,7 @@
 
 E2E 覆盖首页 → 题库 → 搜索 → 打开练习、练习草稿刷新恢复，以及原创题真实 C 编译执行和失败状态。发布前仍应在具备 Chromium 的环境运行 `npx playwright install chromium` 后再次执行 `npm run test:e2e`。
 
+Phase 6 视觉证据位于 `assets/screenshots/v0.3.0-phase6/`：亮色/暗色首页、390px 移动首页、题库、学习路线、练习工作台、运行成功和编译错误。截图由本地 Vite 应用和真实 Chromium 生成；Firefox、WebKit 和真实移动 Safari/Chrome 仍为 `NOT_VERIFIED`。
+
 - Phase 6 本地截图：`assets/screenshots/v0.2.0-phase6/`，包含亮色首页、暗色首页、题库、练习工作台和移动端首页。
 - Phase 6 新增正式题库审计：48 道原创题、240 组测试；C_PAT 38 条来源档案与正式练习分离。

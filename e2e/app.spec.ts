@@ -9,12 +9,12 @@ test('learner can search and open a practice workspace', async ({ page }, testIn
   if (testInfo.project.name === 'mobile') await page.getByRole('button', { name: '打开导航' }).click()
   await page.getByRole('link', { name: '题库' }).click()
   await page.goto('./#/bank?archive=1')
-  await expect(page.getByRole('heading', { name: '把知识点变成手感' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: '来源资料档案' })).toBeVisible()
   await page.getByPlaceholder('搜索题号、标题或知识点').fill('整数')
   await expect(page.getByText('整数四则运算')).toBeVisible()
   await page.getByRole('button', { name: /打开 整数四则运算/ }).click()
   await expect(page.getByRole('textbox', { name: 'C 代码编辑器' })).toBeVisible()
-  await expect(page.getByText('来源已导入')).toBeVisible()
+  await expect(page.getByText('来源档案', { exact: true })).toBeVisible()
   await page.screenshot({ path: testInfo.outputPath('practice-workspace.png'), fullPage: true })
 })
 
@@ -48,6 +48,18 @@ test('help page explains the first practice flow', async ({ page }) => {
   await page.goto('./#/help')
   await expect(page.getByRole('heading', { name: '第一次使用 C·Path？' })).toBeVisible()
   await expect(page.getByText('编译错误、运行错误、超时和错误答案代表不同问题。')).toBeVisible()
+})
+
+test('home offers clear starts and practice supports favorites and reference reveal', async ({ page }) => {
+  await page.goto('./')
+  await expect(page.getByRole('heading', { name: '选择你的起点' })).toBeVisible()
+  await expect(page.getByRole('button', { name: /零基础入门/ })).toBeVisible()
+  await page.goto('./#/practice/orig-hello-world')
+  const favorite = page.getByRole('button', { name: '收藏' })
+  await favorite.click()
+  await expect(page.getByRole('button', { name: '取消收藏' })).toBeVisible()
+  await page.getByRole('button', { name: '查看参考解法' }).click()
+  await expect(page.locator('.reference-code')).toContainText('printf')
 })
 
 test('sandrun executes C with stdin and runs local tests', async ({ page }, testInfo) => {

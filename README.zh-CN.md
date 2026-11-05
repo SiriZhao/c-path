@@ -8,7 +8,7 @@
 
 C·Path 帮助第一次接触编程的学生，通过讲解、可运行练习、本地测试和浏览器学习记录建立 C 语言直觉。项目独立开源，与翁恺老师、浙江大学、PAT 或任何官方课程平台没有关联。
 
-![首页](assets/screenshots/v0.2.0-phase6/home-light.png)
+![C·Path 亮色学习首页](assets/screenshots/v0.3.0-phase6/home-light.png)
 
 ## 在线开始
 
@@ -28,7 +28,7 @@ C·Path 帮助第一次接触编程的学生，通过讲解、可运行练习、
 - 本地草稿与学习记录导出/导入。
 - 明暗主题和响应式布局。
 
-![练习工作台](assets/screenshots/v0.2.0-phase6/practice-workspace.png)
+![带真实 C 运行器的练习工作台](assets/screenshots/v0.3.0-phase6/practice-workspace.png)
 
 ## 学习路线
 
@@ -42,7 +42,11 @@ C·Path 帮助第一次接触编程的学生，通过讲解、可运行练习、
 
 练习页面同时展示题面和编辑器。写代码、输入 stdin、运行当前程序、查看输出，再运行样例或本地测试。参考代码通过单独操作展开。
 
-![题库](assets/screenshots/v0.2.0-phase6/question-bank.png)
+![带知识点和难度筛选的题库](assets/screenshots/v0.3.0-phase6/question-bank.png)
+
+![运行结果](assets/screenshots/v0.3.0-phase6/runtime-output.png)
+
+![编译错误反馈](assets/screenshots/v0.3.0-phase6/compile-error.png)
 
 ## 技术架构
 
@@ -64,13 +68,22 @@ React 19、TypeScript strict mode、Vite、运行时校验的 JSON 题库、ifra
 
 Windows 本地可能受编译器进程权限限制；Ubuntu Actions 是 GCC 验证依据。
 
+## 配套文档
+
+- [新手使用指南](docs/getting-started.zh-CN.md)
+- [常见问题](docs/faq.zh-CN.md)
+- [系统架构](docs/architecture.md)
+- [题目贡献规范](docs/question-authoring.md)
+- [运行器评估](docs/runtime-evaluation.md)
+- [QA 状态](docs/qa-status.md)
+
 ## 截图
 
 | 首页亮色 | 首页暗色 |
 | --- | --- |
-| ![首页亮色](assets/screenshots/v0.2.0-phase6/home-light.png) | ![首页暗色](assets/screenshots/v0.2.0-phase6/home-dark.png) |
+| ![首页亮色](assets/screenshots/v0.3.0-phase6/home-light.png) | ![首页暗色](assets/screenshots/v0.3.0-phase6/home-dark.png) |
 
-![移动端首页](assets/screenshots/v0.2.0-phase6/home-mobile.png)
+![移动端首页](assets/screenshots/v0.3.0-phase6/home-mobile.png)
 
 ## 隐私与限制
 
