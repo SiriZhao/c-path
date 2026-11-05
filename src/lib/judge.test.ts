@@ -5,7 +5,7 @@ describe('judge boundary', () => {
   it('fails closed when no trusted compiler is configured', async () => {
     const result = await runCCode('int main(void) { return 0; }', '')
     expect(result.status).toBe('UNAVAILABLE')
-    expect(result.message).toContain('未配置')
+    expect(result.message).toContain('不可用')
     expect(result.exitCode).toBeNull()
   })
 })

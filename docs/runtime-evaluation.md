@@ -1,10 +1,10 @@
 # C 运行器技术评估
 
-评估日期：2026-11-04
+评估日期：2026-11-05
 
 ## 结论
 
-当前版本继续保持 `UNAVAILABLE`，没有把第三方公共执行服务接入生产页面。`src/lib/judge.ts` 已保留适配器边界，页面会明确告诉学习者没有可信编译器，不会伪造输出或 Accepted。
+当前版本已接入经过实际 Chromium CI 验证的浏览器端 C 运行器：`@browserrun/sandrun@0.4.0` 的 xcc 引擎。代码在沙箱 iframe 内的 Worker 中编译和执行，练习页会显示真实 stdout、stderr、退出码、耗时、编译错误、超时和输出上限状态。它仍然是本地测试，不提供服务器隐藏测试或防作弊 Accepted。
 
 ## 调研结果
 
@@ -22,10 +22,11 @@
 
 本仓库尚未锁定第三方工具链版本、分发许可证文件、WASM 资源哈希、Worker 协议、超时终止测试或移动端兼容性证据。当前环境的 GCC 验证也因 Windows 沙箱阻止编译器生成临时/可执行文件而未完成。现在接入会让页面看似可运行，却无法证明 C11、scanf、stderr、无限循环终止和移动端兼容性。保留 fail-closed 状态更符合证据边界。
 
+Phase 5 先验证了 `browsercc@0.1.1`：真实 Chromium 能加载页面，但 180 秒内没有回传 C 编译结果，因此没有继续使用。随后切换到 `@browserrun/sandrun@0.4.0` 的 xcc C 引擎：默认运行时约 0.4 MB，使用 opaque-origin iframe + Worker，提供 stdin/stdout、超时、输出上限和运行时缓存。为避免 Vite 改写沙箱 Worker 内的动态导入，sandrun 的 MIT 许可运行时模块以静态资产复制到 `public/sandrun/`，主应用只按需加载入口。CI 运行号 `41983805318` 已真实验证 scanf 求和、公开样例 2/2、本地测试 5/5、编译错误和无限循环超时。
+
 ## 后续接入路线
 
-1. 在独立实验分支固定 Emscripten 或 Wasmer 版本，并核对许可证与包体积。
-2. 用 Worker + 可终止执行实例实现 `compile`、`run`、`timeout`、`stderr` 和退出码协议。
-3. 用最小 C 程序覆盖 `printf`、`scanf`、循环、数组、函数和字符串，保存真实输出证据。
-4. 在 GitHub Pages 预览环境验证 COOP/COEP、service worker 首次加载和移动浏览器行为。
-5. 只有通过这些检查后，才将 `UNAVAILABLE` 替换成真实状态，并为具备测试数据的题目启用比较器。
+1. 继续补充 xcc 与 GCC 的差异测试，特别是 `string.h`、`math.h` 和未定义行为提示。
+2. 在独立实验分支评估 sandrun 的 clang 引擎，只有在包体积和移动端兼容性可接受时才启用。
+3. 在 GitHub Pages 真站验证首次下载、缓存失效和慢网恢复，并增加 Firefox/WebKit 证据。
+4. 对真实运行器增加取消任务和连续运行的浏览器测试，避免旧结果覆盖新结果。

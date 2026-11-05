@@ -1,8 +1,9 @@
+import { BrowserCompilerAdapter } from './runtime/browser-adapter'
 import type { CompilerAdapter, ExecutionLimits, ExecutionResult } from './runtime/types'
 
 export type JudgeResult = ExecutionResult & { message: string }
 
-export const DEFAULT_LIMITS: ExecutionLimits = { timeoutMs: 2000, maxInputBytes: 16_384, maxOutputBytes: 64_000 }
+export const DEFAULT_LIMITS: ExecutionLimits = { timeoutMs: 2000, compileTimeoutMs: 120_000, maxInputBytes: 16_384, maxOutputBytes: 64_000 }
 
 export class UnavailableCompilerAdapter implements CompilerAdapter {
   readonly id = 'unavailable'
@@ -12,12 +13,8 @@ export class UnavailableCompilerAdapter implements CompilerAdapter {
   }
 }
 
-export const compilerAdapter: CompilerAdapter = new UnavailableCompilerAdapter()
+export const compilerAdapter: CompilerAdapter = new BrowserCompilerAdapter()
 
-/**
- * GitHub Pages has no trusted compiler process. This adapter deliberately fails closed
- * until a reviewed WebAssembly compiler or server endpoint is configured.
- */
 export function runCCode(source: string, input: string, limits = DEFAULT_LIMITS): Promise<JudgeResult> {
-  return compilerAdapter.execute(source, input, limits).then(result => ({ ...result, message: result.status === 'UNAVAILABLE' ? '当前静态站点未配置 C 编译器。编辑器、保存和学习反馈可用；运行结果不会被伪造。' : result.status }))
+  return compilerAdapter.execute(source, input, limits).then(result => ({ ...result, message: result.status === 'UNAVAILABLE' ? '浏览器端 C 运行器当前不可用，未生成伪造结果。' : result.status }))
 }
