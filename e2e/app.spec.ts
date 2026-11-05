@@ -31,7 +31,7 @@ test('original exercise exposes real statement and local test inventory', async 
   await expect(page.getByText('当前静态站点未配置 C 编译器')).toHaveCount(0)
 })
 
-test('browsercc executes C with stdin and runs local tests', async ({ page }, testInfo) => {
+test('sandrun executes C with stdin and runs local tests', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === 'mobile', '运行器编译验收只在桌面 Chromium 执行，移动端仍覆盖页面交互。')
   test.setTimeout(180_000)
   page.on('console', message => console.log(`[browser:${message.type()}] ${message.text()}`))
