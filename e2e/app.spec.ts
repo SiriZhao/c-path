@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import originals from '../src/data/originals.json'
 
 test('learner can search and open a practice workspace', async ({ page }, testInfo) => {
   await page.goto('./')
@@ -58,4 +59,16 @@ test('sandrun reports compiler and timeout failures honestly', async ({ page }, 
   await page.getByRole('button', { name: '运行', exact: true }).click()
   await expect(page.locator('.result-status')).toHaveText('TIME_LIMIT_EXCEEDED', { timeout: 30_000 })
   await page.screenshot({ path: testInfo.outputPath('runtime-failure-states.png'), fullPage: true })
+})
+
+test('sandrun executes every original reference through local tests', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'mobile', '原创题批量运行只在桌面 Chromium 执行，移动端仍覆盖页面交互。')
+  test.setTimeout(240_000)
+  for (const original of originals) {
+    await page.goto(`./#/practice/${original.id}`)
+    await page.getByRole('textbox', { name: 'C 代码编辑器' }).fill(original.referenceSolution)
+    await page.getByRole('button', { name: '提交本地测试' }).click()
+    await expect(page.getByText(`测试结果 ${original.testCases.length}/${original.testCases.length}`)).toBeVisible({ timeout: 120_000 })
+  }
+  await page.screenshot({ path: testInfo.outputPath('all-original-references.png'), fullPage: true })
 })
