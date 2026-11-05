@@ -16,7 +16,13 @@ workerSelf.onmessage = async (event) => {
     return
   }
   sendPhase('compiling')
-  const compiled = await compile({ source: request.source, fileName: 'main.c', flags: ['-std=c11'] })
+  let compiled: Awaited<ReturnType<typeof compile>>
+  try {
+    compiled = await compile({ source: request.source, fileName: 'main.c', flags: ['-std=c11'] })
+  } catch (error) {
+    sendResult({ status: 'COMPILATION_ERROR', stdout: '', stderr: '', exitCode: null, compileDiagnostics: error instanceof Error ? error.stack ?? error.message : String(error), detail: '编译器初始化或编译过程发生异常。' })
+    return
+  }
   if (!compiled.module) {
     sendResult({ status: 'COMPILATION_ERROR', stdout: '', stderr: '', exitCode: null, compileDiagnostics: compiled.compileOutput, detail: 'C 编译器返回了诊断信息。' })
     return

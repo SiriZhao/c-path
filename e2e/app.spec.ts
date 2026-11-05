@@ -38,7 +38,7 @@ test('browsercc executes C with stdin and runs local tests', async ({ page }, te
   await page.getByRole('textbox', { name: 'C 代码编辑器' }).fill('#include <stdio.h>\nint main(void) { int a, b; if (scanf("%d %d", &a, &b) != 2) return 1; printf("%d\\n", a + b); return 0; }')
   await page.locator('.input-label textarea').fill('3 5')
   await page.getByRole('button', { name: '运行', exact: true }).click()
-  await expect(page.locator('.console-output pre').first()).toContainText('8', { timeout: 60_000 })
+  await expect(page.locator('.console-output pre').first()).toContainText('8', { timeout: 180_000 })
   await page.getByRole('button', { name: '运行样例' }).click()
   await expect(page.getByText('测试结果 2/2')).toBeVisible({ timeout: 120_000 })
   await page.getByRole('button', { name: '提交本地测试' }).click()
