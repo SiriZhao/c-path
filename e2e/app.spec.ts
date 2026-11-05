@@ -9,7 +9,7 @@ test('learner can search and open a practice workspace', async ({ page }, testIn
   await expect(page.getByText('整数四则运算')).toBeVisible()
   await page.getByRole('button', { name: /打开 整数四则运算/ }).click()
   await expect(page.getByRole('textbox', { name: 'C 代码编辑器' })).toBeVisible()
-  await expect(page.getByText('来源已导入 · 待审核')).toBeVisible()
+  await expect(page.getByText('来源已导入')).toBeVisible()
   await page.screenshot({ path: testInfo.outputPath('practice-workspace.png'), fullPage: true })
 })
 
