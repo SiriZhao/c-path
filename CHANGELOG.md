@@ -6,6 +6,8 @@
 - Added 38 original exercises, bringing the formal practice set to 48 questions and 240 local tests.
 - Separated C_PAT source records from the default formal practice list.
 - Added a formal question completeness audit and bilingual README screenshots.
+- Added clear start paths, featured exercises, topic/difficulty filters, favorites and reference-solution disclosure.
+- Added bilingual getting-started and FAQ documentation plus fresh light, dark, mobile, runtime and compiler-error screenshots.
 
 ## 0.1.0
 

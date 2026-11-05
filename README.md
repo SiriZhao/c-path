@@ -8,7 +8,7 @@
 
 C·Path helps first-time programmers learn C through explanations, runnable exercises, local tests and browser-local progress. It is independent and is not affiliated with翁恺老师、浙江大学、PAT or any official course platform.
 
-![Home](assets/screenshots/v0.2.0-phase6/home-light.png)
+![C·Path learning dashboard in light mode](assets/screenshots/v0.3.0-phase6/home-light.png)
 
 ## Start online
 
@@ -28,7 +28,7 @@ C·Path helps first-time programmers learn C through explanations, runnable exer
 - Local drafts and learning records with export/import.
 - Light/dark themes and responsive layouts.
 
-![Practice workspace](assets/screenshots/v0.2.0-phase6/practice-workspace.png)
+![Practice workspace with real C execution](assets/screenshots/v0.3.0-phase6/practice-workspace.png)
 
 ## Learning roadmap
 
@@ -42,7 +42,11 @@ The question bank defaults to complete original exercises. Search by title, ID, 
 
 The practice page keeps the problem and editor together. Write code, add stdin, run the current program, inspect output, then run samples or local tests. Reference code is behind an explicit disclosure control.
 
-![Question bank](assets/screenshots/v0.2.0-phase6/question-bank.png)
+![Question bank with topic and difficulty filters](assets/screenshots/v0.3.0-phase6/question-bank.png)
+
+![Runtime output](assets/screenshots/v0.3.0-phase6/runtime-output.png)
+
+![Compiler error feedback](assets/screenshots/v0.3.0-phase6/compile-error.png)
 
 ## Architecture
 
@@ -64,13 +68,22 @@ The browser runner is for short educational programs. Static hosting cannot prov
 
 Windows compiler process restrictions may prevent local GCC validation; Ubuntu Actions is the authoritative GCC evidence.
 
+## Documentation
+
+- [Getting started](docs/getting-started.en.md)
+- [FAQ](docs/faq.en.md)
+- [Architecture](docs/architecture.md)
+- [Question authoring](docs/question-authoring.md)
+- [Runtime evaluation](docs/runtime-evaluation.md)
+- [QA status](docs/qa-status.md)
+
 ## Screenshots
 
 | Light | Dark |
 | --- | --- |
-| ![Light home](assets/screenshots/v0.2.0-phase6/home-light.png) | ![Dark home](assets/screenshots/v0.2.0-phase6/home-dark.png) |
+| ![Light home](assets/screenshots/v0.3.0-phase6/home-light.png) | ![Dark home](assets/screenshots/v0.3.0-phase6/home-dark.png) |
 
-![Mobile home](assets/screenshots/v0.2.0-phase6/home-mobile.png)
+![Mobile home](assets/screenshots/v0.3.0-phase6/home-mobile.png)
 
 ## Privacy and limitations
 
