@@ -36,7 +36,7 @@
     ],
     "explanation": "这道题通过scanf练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b,c;if(scanf(\"%d%d%d\",&a,&b,&c)!=3)return 1;printf(\"%d\\\\n\",a+b+c);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b,c;if(scanf(\"%d%d%d\",&a,&b,&c)!=3)return 1;printf(\"%d\\n\",a+b+c);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -108,7 +108,7 @@
     ],
     "explanation": "这道题通过运算符练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\\\n\",a*a+b*b-a*b);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n\",a*a+b*b-a*b);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -180,7 +180,7 @@
     ],
     "explanation": "这道题通过浮点数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){double c;if(scanf(\"%lf\",&c)!=1)return 1;printf(\"%.1f\\\\n\",c*9.0/5.0+32.0);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){double c;if(scanf(\"%lf\",&c)!=1)return 1;printf(\"%.1f\\n\",c*9.0/5.0+32.0);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -252,7 +252,7 @@
     ],
     "explanation": "这道题通过变量练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\\\n%d\\\\n\",a*b,2*(a+b));return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n%d\\n\",a*b,2*(a+b));return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -612,7 +612,7 @@
     ],
     "explanation": "这道题通过for练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;long long sum=0;for(int i=1;i<=n;i++)sum+=i;printf(\"%lld\\\\n\",sum);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;long long sum=0;for(int i=1;i<=n;i++)sum+=i;printf(\"%lld\\n\",sum);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -684,7 +684,7 @@
     ],
     "explanation": "这道题通过for练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=5;i++)printf(\"%d\\\\n\",n*i);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=5;i++)printf(\"%d\\n\",n*i);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -756,7 +756,7 @@
     ],
     "explanation": "这道题通过for练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,count=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=n;i++)if(i%2==0)count++;printf(\"%d\\\\n\",count);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,count=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=n;i++)if(i%2==0)count++;printf(\"%d\\n\",count);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -828,7 +828,7 @@
     ],
     "explanation": "这道题通过while练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;int sum=0;if(n==0)sum=0;while(n>0){sum+=n%10;n/=10;}printf(\"%d\\\\n\",sum);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;int sum=0;if(n==0)sum=0;while(n>0){sum+=n%10;n/=10;}printf(\"%d\\n\",sum);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -900,7 +900,7 @@
     ],
     "explanation": "这道题通过while练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;int r=0;while(n>0){r=r*10+n%10;n/=10;}printf(\"%d\\\\n\",r);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;int r=0;while(n>0){r=r*10+n%10;n/=10;}printf(\"%d\\n\",r);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -972,7 +972,7 @@
     ],
     "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint gcd(int a,int b){while(b){int t=a%b;a=b;b=t;}return a;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\\\n\",gcd(a,b));return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint gcd(int a,int b){while(b){int t=a%b;a=b;b=t;}return a;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n\",gcd(a,b));return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1116,7 +1116,7 @@
     ],
     "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint prime(int n){if(n<2)return 0;for(int i=2;i*i<=n;i++)if(n%i==0)return 0;return 1;}\nint main(void){int a,b,count=0;if(scanf(\"%d%d\",&a,&b)!=2)return 1;for(int n=a;n<=b;n++)if(prime(n))count++;printf(\"%d\\\\n\",count);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint prime(int n){if(n<2)return 0;for(int i=2;i*i<=n;i++)if(n%i==0)return 0;return 1;}\nint main(void){int a,b,count=0;if(scanf(\"%d%d\",&a,&b)!=2)return 1;for(int n=a;n<=b;n++)if(prime(n))count++;printf(\"%d\\n\",count);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1188,7 +1188,7 @@
     ],
     "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;long long a=1,b=1;for(int i=3;i<=n;i++){long long t=a+b;a=b;b=t;}printf(\"%lld\\\\n\",n==1?a:b);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;long long a=1,b=1;for(int i=3;i<=n;i++){long long t=a+b;a=b;b=t;}printf(\"%lld\\n\",n==1?a:b);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1260,7 +1260,7 @@
     ],
     "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint power(int base,int exp){int r=1;for(int i=0;i<exp;i++)r*=base;return r;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\\\n\",power(a,b));return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint power(int base,int exp){int r=1;for(int i=0;i<exp;i++)r*=base;return r;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;printf(\"%d\\n\",power(a,b));return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1332,7 +1332,7 @@
     ],
     "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,count=0;if(scanf(\"%d\",&n)!=1)return 1;do{count++;n/=2;}while(n);printf(\"%d\\\\n\",count);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,count=0;if(scanf(\"%d\",&n)!=1)return 1;do{count++;n/=2;}while(n);printf(\"%d\\n\",count);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1404,7 +1404,7 @@
     ],
     "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];long long sum=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&a[i]);sum+=a[i];}printf(\"%lld\\\\n\",sum);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];long long sum=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&a[i]);sum+=a[i];}printf(\"%lld\\n\",sum);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1476,7 +1476,7 @@
     ],
     "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,min=0,pos=1;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=n;i++){scanf(\"%d\",&x);if(i==1||x<min){min=x;pos=i;}}printf(\"%d %d\\\\n\",min,pos);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,min=0,pos=1;if(scanf(\"%d\",&n)!=1)return 1;for(int i=1;i<=n;i++){scanf(\"%d\",&x);if(i==1||x<min){min=x;pos=i;}}printf(\"%d %d\\n\",min,pos);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1548,7 +1548,7 @@
     ],
     "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,count=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&x);if(x>0)count++;}printf(\"%d\\\\n\",count);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,count=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&x);if(x>0)count++;}printf(\"%d\\n\",count);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1620,7 +1620,7 @@
     ],
     "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);for(int i=n-1;i>=0;i--)printf(\"%d%c\",a[i],i?' ':'\\\\n');return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);for(int i=n-1;i>=0;i--)printf(\"%d%c\",a[i],i?' ':'\\n');return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1692,7 +1692,7 @@
     ],
     "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100],first;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);first=a[0];for(int i=0;i<n-1;i++)a[i]=a[i+1];a[n-1]=first;for(int i=0;i<n;i++)printf(\"%d%c\",a[i],i==n-1?'\\\\n':' ');return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100],first;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);first=a[0];for(int i=0;i<n-1;i++)a[i]=a[i+1];a[n-1]=first;for(int i=0;i<n;i++)printf(\"%d%c\",a[i],i==n-1?'\\n':' ');return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1764,7 +1764,7 @@
     ],
     "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,a[100],pos=-1;if(scanf(\"%d%d\",&n,&x)!=2)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&a[i]);if(pos==-1&&a[i]==x)pos=i+1;}printf(\"%d\\\\n\",pos);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,a[100],pos=-1;if(scanf(\"%d%d\",&n,&x)!=2)return 1;for(int i=0;i<n;i++){scanf(\"%d\",&a[i]);if(pos==-1&&a[i]==x)pos=i+1;}printf(\"%d\\n\",pos);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1836,7 +1836,7 @@
     ],
     "explanation": "这道题通过数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);for(int i=0;i<n-1;i++)for(int j=0;j<n-1-i;j++)if(a[j]>a[j+1]){int t=a[j];a[j]=a[j+1];a[j+1]=t;}for(int i=0;i<n;i++)printf(\"%d%c\",a[i],i==n-1?'\\\\n':' ');return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,a[100];if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)scanf(\"%d\",&a[i]);for(int i=0;i<n-1;i++)for(int j=0;j<n-1-i;j++)if(a[j]>a[j+1]){int t=a[j];a[j]=a[j+1];a[j+1]=t;}for(int i=0;i<n;i++)printf(\"%d%c\",a[i],i==n-1?'\\n':' ');return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1908,7 +1908,7 @@
     ],
     "explanation": "这道题通过二维数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,sum=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)for(int j=0;j<n;j++){scanf(\"%d\",&x);if(i==j)sum+=x;}printf(\"%d\\\\n\",sum);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,x,sum=0;if(scanf(\"%d\",&n)!=1)return 1;for(int i=0;i<n;i++)for(int j=0;j<n;j++){scanf(\"%d\",&x);if(i==j)sum+=x;}printf(\"%d\\n\",sum);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -1980,7 +1980,7 @@
     ],
     "explanation": "这道题通过二维数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int n,m,x,max=0;if(scanf(\"%d%d\",&n,&m)!=2)return 1;for(int i=0;i<n;i++){for(int j=0;j<m;j++){scanf(\"%d\",&x);if(j==0||x>max)max=x;}printf(\"%d\\\\n\",max);}return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int n,m,x,max=0;if(scanf(\"%d%d\",&n,&m)!=2)return 1;for(int i=0;i<n;i++){for(int j=0;j<m;j++){scanf(\"%d\",&x);if(j==0||x>max)max=x;}printf(\"%d\\n\",max);}return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2052,7 +2052,7 @@
     ],
     "explanation": "这道题通过二维数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){int a[2][3];for(int i=0;i<2;i++)for(int j=0;j<3;j++)scanf(\"%d\",&a[i][j]);for(int j=0;j<3;j++)printf(\"%d %d\\\\n\",a[0][j],a[1][j]);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){int a[2][3];for(int i=0;i<2;i++)for(int j=0;j<3;j++)scanf(\"%d\",&a[i][j]);for(int j=0;j<3;j++)printf(\"%d %d\\n\",a[0][j],a[1][j]);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2124,7 +2124,7 @@
     ],
     "explanation": "这道题通过字符数组练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int count=0;for(int i=0;s[i]&&s[i]!=\\'\\\\n\\';i++){char c=s[i];if(c>=\\'A\\'&&c<=\\'Z\\')c+=\\'a\\'-\\'A\\';if(c==\\'a\\'||c==\\'e\\'||c==\\'i\\'||c==\\'o\\'||c==\\'u\\')count++;}printf(\"%d\\\\n\",count);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int count=0;for(int i=0;s[i]&&s[i]!='\\n';i++){char c=s[i];if(c>='A'&&c<='Z')c+='a'-'A';if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')count++;}printf(\"%d\\n\",count);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2196,7 +2196,7 @@
     ],
     "explanation": "这道题通过字符串练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int n=0;while(s[n]&&s[n]!=\\'\\\\n\\')n++;for(int i=n-1;i>=0;i--)putchar(s[i]);putchar(\\'\\\\n\\');return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int n=0;while(s[n]&&s[n]!='\\n')n++;for(int i=n-1;i>=0;i--)putchar(s[i]);putchar('\\n');return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2340,7 +2340,7 @@
     ],
     "explanation": "这道题通过字符串练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int count=0,in=0;for(int i=0;s[i]&&s[i]!=\\'\\\\n\\';i++){if(s[i]!=\\' \\'){if(!in)count++;in=1;}else in=0;}printf(\"%d\\\\n\",count);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;int count=0,in=0;for(int i=0;s[i]&&s[i]!='\\n';i++){if(s[i]!=' '){if(!in)count++;in=1;}else in=0;}printf(\"%d\\n\",count);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2412,7 +2412,7 @@
     ],
     "explanation": "这道题通过字符练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;for(int i=0;s[i];i++)if(s[i]>=\\'a\\'&&s[i]<=\\'z\\')s[i]-=\\'a\\'-\\'A\\';fputs(s,stdout);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint main(void){char s[101];if(!fgets(s,101,stdin))return 1;for(int i=0;s[i];i++)if(s[i]>='a'&&s[i]<='z')s[i]-='a'-'A';fputs(s,stdout);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2484,7 +2484,7 @@
     ],
     "explanation": "这道题通过函数练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nint absolute(int n){return n<0?-n:n;}\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;printf(\"%d\\\\n\",absolute(n));return 0;}",
+    "referenceSolution": "#include <stdio.h>\nint absolute(int n){return n<0?-n:n;}\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;printf(\"%d\\n\",absolute(n));return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2556,7 +2556,7 @@
     ],
     "explanation": "这道题通过递归练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nlong long factorial(int n){if(n<=1)return 1;return n*factorial(n-1);}\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;printf(\"%lld\\\\n\",factorial(n));return 0;}",
+    "referenceSolution": "#include <stdio.h>\nlong long factorial(int n){if(n<=1)return 1;return n*factorial(n-1);}\nint main(void){int n;if(scanf(\"%d\",&n)!=1)return 1;printf(\"%lld\\n\",factorial(n));return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2628,7 +2628,7 @@
     ],
     "explanation": "这道题通过指针练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\nvoid swap(int *a,int *b){int t=*a;*a=*b;*b=t;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;swap(&a,&b);printf(\"%d %d\\\\n\",a,b);return 0;}",
+    "referenceSolution": "#include <stdio.h>\nvoid swap(int *a,int *b){int t=*a;*a=*b;*b=t;}\nint main(void){int a,b;if(scanf(\"%d%d\",&a,&b)!=2)return 1;swap(&a,&b);printf(\"%d %d\\n\",a,b);return 0;}",
     "testCases": [
       {
         "id": "case-1",
@@ -2700,7 +2700,7 @@
     ],
     "explanation": "这道题通过结构体练习把输入、处理和输出串起来，适合在完成前置知识后独立实现。",
     "starterCode": "#include <stdio.h>\n\nint main(void) {\n    return 0;\n}\n",
-    "referenceSolution": "#include <stdio.h>\ntypedef struct{char name[21];int score[3];}Student;\nint main(void){Student s;if(scanf(\"%20s%d%d%d\",s.name,&s.score[0],&s.score[1],&s.score[2])!=4)return 1;printf(\"%.1f\\\\n\",(s.score[0]+s.score[1]+s.score[2])/3.0);return 0;}",
+    "referenceSolution": "#include <stdio.h>\ntypedef struct{char name[21];int score[3];}Student;\nint main(void){Student s;if(scanf(\"%20s%d%d%d\",s.name,&s.score[0],&s.score[1],&s.score[2])!=4)return 1;printf(\"%.1f\\n\",(s.score[0]+s.score[1]+s.score[2])/3.0);return 0;}",
     "testCases": [
       {
         "id": "case-1",

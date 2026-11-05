@@ -23,6 +23,7 @@ def task(id, title, ch, topics, difficulty, statement, input_format, output_form
     for index, test in enumerate(tests, 1): test['id'] = f'case-{index}'
     hints = hints or [f'先明确输入中的数据和需要输出的结果，再选择 {topics[0]} 相关语法。', '把程序拆成读取、处理、输出三个阶段，先用最小样例手动跟踪变量变化。', '完成后检查边界值、循环条件和输出换行，确认每个测试都使用了真实输入。']
     examples = [{'input': tests[0]['input'], 'output': tests[0]['expectedOutput'].rstrip('\n')}, {'input': tests[1]['input'], 'output': tests[1]['expectedOutput'].rstrip('\n')}] if len(tests) > 1 else [{'input': tests[0]['input'], 'output': tests[0]['expectedOutput'].rstrip('\n')}]
+    reference = re.sub(r'(?<!\\)\\n', '\n', reference).replace('\\\\', '\\').replace("\\'", "'")
     return {
         'source': 'C·Path Originals / 原创基础练习', 'sourceKind': 'original', 'reviewStatus': 'reviewed',
         'contentStatus': 'ready-for-local-judge', 'testVersion': 'originals-v2', 'author': 'C·Path maintainers',
