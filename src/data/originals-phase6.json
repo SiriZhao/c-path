@@ -2149,7 +2149,7 @@
       {
         "id": "case-5",
         "input": "a quick test\n",
-        "expectedOutput": "5\n"
+        "expectedOutput": "4\n"
       }
     ],
     "provenance": {
