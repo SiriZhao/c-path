@@ -24,7 +24,7 @@ export type Question = {
   explanation: string | null
   starterCode: string
   referenceSolution: string
-  testCases: Array<{ input: string; output: string }>
+  testCases: TestCase[]
   provenance: { path: string; sha256: string; readmeScore: string; contentStatus: string }
   reviewStatus: ReviewStatus
   sourceKind: SourceKind

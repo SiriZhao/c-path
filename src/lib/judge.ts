@@ -1,8 +1,9 @@
+import { BrowserCompilerAdapter } from './runtime/browser-adapter'
 import type { CompilerAdapter, ExecutionLimits, ExecutionResult } from './runtime/types'
 
 export type JudgeResult = ExecutionResult & { message: string }
 
-export const DEFAULT_LIMITS: ExecutionLimits = { timeoutMs: 2000, maxInputBytes: 16_384, maxOutputBytes: 64_000 }
+export const DEFAULT_LIMITS: ExecutionLimits = { timeoutMs: 2000, compileTimeoutMs: 20_000, maxInputBytes: 16_384, maxOutputBytes: 64_000 }
 
 export class UnavailableCompilerAdapter implements CompilerAdapter {
   readonly id = 'unavailable'
@@ -12,7 +13,7 @@ export class UnavailableCompilerAdapter implements CompilerAdapter {
   }
 }
 
-export const compilerAdapter: CompilerAdapter = new UnavailableCompilerAdapter()
+export const compilerAdapter: CompilerAdapter = new BrowserCompilerAdapter()
 
 /**
  * GitHub Pages has no trusted compiler process. This adapter deliberately fails closed
