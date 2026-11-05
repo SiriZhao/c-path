@@ -53,7 +53,8 @@ export function importProgress(raw: string): Progress {
 export function recordLearningEvent(progress: Progress, questionId: string, kind: LearningEventKind, detail?: string, at = new Date().toISOString()): Progress {
   const event: LearningEvent = { kind, at, ...(detail ? { detail } : {}) }
   const previous = progress.events[questionId] ?? []
-  const nextState: LearningState = kind === 'local-tests-passed' ? 'local-tests-passed' : kind === 'sample-passed' ? 'sample-passed' : kind === 'self-completed' ? 'self-completed' : kind === 'needs-review' ? 'needs-review' : kind === 'opened' || kind === 'draft-saved' || kind === 'run-attempted' || kind === 'test-executed' ? 'in-progress' : (progress.states[questionId] ?? 'not-started')
+  const currentState = progress.states[questionId] ?? 'not-started'
+  const nextState: LearningState = kind === 'needs-review' ? 'needs-review' : currentState === 'local-tests-passed' && kind !== 'local-tests-passed' ? currentState : kind === 'local-tests-passed' ? 'local-tests-passed' : kind === 'sample-passed' ? 'sample-passed' : kind === 'self-completed' ? 'self-completed' : kind === 'opened' || kind === 'draft-saved' || kind === 'run-attempted' || kind === 'test-executed' ? 'in-progress' : currentState
   const recent = [{ questionId, kind, at }, ...progress.recent.filter(item => item.questionId !== questionId || item.kind !== kind)].slice(0, 30)
   const attempts = kind === 'run-attempted' ? { ...progress.attempts, [questionId]: (progress.attempts[questionId] ?? 0) + 1 } : progress.attempts
   return { ...progress, events: { ...progress.events, [questionId]: [...previous, event].slice(-100) }, states: { ...progress.states, [questionId]: nextState }, recent, attempts, lastQuestion: questionId }

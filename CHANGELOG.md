@@ -1,7 +1,12 @@
 # Changelog
 
-## 0.1.0 — 2026-11-03
+## Unreleased — Phase 6
 
-- 建立课程地图、题库审计导入和练习工作区。
-- 加入本地学习记录、搜索过滤、主题切换和开源文档。
-- 明确 GitHub Pages 静态部署下 C 编译与判题尚未启用。
+- Redesigned the learning dashboard, roadmap, question bank and help flow.
+- Added 38 original exercises, bringing the formal practice set to 48 questions and 240 local tests.
+- Separated C_PAT source records from the default formal practice list.
+- Added a formal question completeness audit and bilingual README screenshots.
+
+## 0.1.0
+
+- Initial public C·Path learning workspace and browser C runtime.

@@ -43,4 +43,10 @@ describe('learning progress storage', () => {
     expect(progress.attempts['orig-sum-two-integers']).toBe(1)
     expect(progress.events['orig-sum-two-integers']).toHaveLength(2)
   })
+  it('preserves a local test pass when a learner saves or marks the exercise', () => {
+    let progress = recordLearningEvent({ ...EMPTY_PROGRESS }, 'orig-sum-two-integers', 'local-tests-passed')
+    progress = recordLearningEvent(progress, 'orig-sum-two-integers', 'draft-saved')
+    progress = recordLearningEvent(progress, 'orig-sum-two-integers', 'self-completed')
+    expect(progress.states['orig-sum-two-integers']).toBe('local-tests-passed')
+  })
 })

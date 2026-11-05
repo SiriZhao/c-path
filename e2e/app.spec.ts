@@ -34,6 +34,20 @@ test('original exercise exposes real statement and local test inventory', async 
   await expect(page.getByText('当前静态站点未配置 C 编译器')).toHaveCount(0)
 })
 
+test('formal practice and source archive stay separated', async ({ page }) => {
+  await page.goto('./#/bank')
+  await expect(page.getByText('48 PRACTICE ITEMS')).toBeVisible()
+  await page.getByRole('link', { name: '查看来源档案' }).click()
+  await expect(page.getByText('38 ITEMS')).toBeVisible()
+  await expect(page.getByText('来源档案')).toBeVisible()
+})
+
+test('help page explains the first practice flow', async ({ page }) => {
+  await page.goto('./#/help')
+  await expect(page.getByRole('heading', { name: '第一次使用 C·Path？' })).toBeVisible()
+  await expect(page.getByText('编译错误、运行错误、超时和错误答案代表不同问题。')).toBeVisible()
+})
+
 test('sandrun executes C with stdin and runs local tests', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name === 'mobile', '运行器编译验收只在桌面 Chromium 执行，移动端仍覆盖页面交互。')
   test.setTimeout(180_000)
