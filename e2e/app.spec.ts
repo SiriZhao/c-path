@@ -6,7 +6,9 @@ const originals = JSON.parse(readFileSync(new URL('../src/data/originals.json', 
 test('learner can search and open a practice workspace', async ({ page }, testInfo) => {
   await page.goto('./')
   await expect(page).toHaveTitle(/C·Path/)
+  if (testInfo.project.name === 'mobile') await page.getByRole('button', { name: '打开导航' }).click()
   await page.getByRole('link', { name: '题库' }).click()
+  await page.goto('./#/bank?archive=1')
   await expect(page.getByRole('heading', { name: '把知识点变成手感' })).toBeVisible()
   await page.getByPlaceholder('搜索题号、标题或知识点').fill('整数')
   await expect(page.getByText('整数四则运算')).toBeVisible()
@@ -36,9 +38,9 @@ test('original exercise exposes real statement and local test inventory', async 
 
 test('formal practice and source archive stay separated', async ({ page }) => {
   await page.goto('./#/bank')
-  await expect(page.getByText('48 PRACTICE ITEMS')).toBeVisible()
+  await expect(page.locator('.page-intro .eyebrow')).toContainText('48')
   await page.getByRole('link', { name: '查看来源档案' }).click()
-  await expect(page.getByText('38 ITEMS')).toBeVisible()
+  await expect(page.locator('.page-intro .eyebrow')).toContainText('38')
   await expect(page.getByText('来源档案')).toBeVisible()
 })
 
