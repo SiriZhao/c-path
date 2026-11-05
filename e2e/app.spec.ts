@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test'
-import originals from '../src/data/originals.json'
+import { readFileSync } from 'node:fs'
+
+const originals = JSON.parse(readFileSync(new URL('../src/data/originals.json', import.meta.url), 'utf8')) as Array<{ id: string; referenceSolution: string; testCases: unknown[] }>
 
 test('learner can search and open a practice workspace', async ({ page }, testInfo) => {
   await page.goto('./')
