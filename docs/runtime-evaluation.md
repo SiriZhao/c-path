@@ -22,7 +22,7 @@
 
 本仓库尚未锁定第三方工具链版本、分发许可证文件、WASM 资源哈希、Worker 协议、超时终止测试或移动端兼容性证据。当前环境的 GCC 验证也因 Windows 沙箱阻止编译器生成临时/可执行文件而未完成。现在接入会让页面看似可运行，却无法证明 C11、scanf、stderr、无限循环终止和移动端兼容性。保留 fail-closed 状态更符合证据边界。
 
-Phase 5 已在独立分支加入 `browsercc@0.1.1` 与 `@bjorn3/browser_wasi_shim@0.4.2` 的 Worker 适配器。生产接入门槛改为真实 Chromium CI：必须通过 Hello/scanf、编译错误、输出限制、超时和取消用例后才合并到 `main`。当前分支状态仍属于待 CI 验证，稳定线上版本不会因这次实验直接回归。
+Phase 5 先验证了 `browsercc@0.1.1`：真实 Chromium 能加载页面，但 180 秒内没有回传 C 编译结果，未接入稳定生产链路。随后切换到 `@browserrun/sandrun@0.4.0` 的 xcc C 引擎：默认运行时约 0.4 MB，使用 opaque-origin iframe + Worker，提供 stdin/stdout、超时、输出上限和运行时缓存。适配器已切换到 Sandrun，生产接入门槛仍是 Chromium CI 的真实 Hello/scanf、编译错误、Wrong Answer、超时和取消用例。
 
 ## 后续接入路线
 
